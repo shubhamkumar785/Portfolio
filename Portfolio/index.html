@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shubham Portfolio</title>
+        <!-- <link rel="icon" type="image/png" href="logo1.png"> -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="index.css">
+        <script src="https://kit.fontawesome.com/c4254e24a8.js"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div id="header" class="site-section" tabindex="-1">
+            <div class="container">
+                <nav>
+                    <img src="logo1.png" class="logo">
+                    <ul id="sidemenu" class="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skill">Skills</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <button class="menu-close" aria-label="Close menu"
+                            onclick="closemenu()"><i
+                                class="fas fa-times"></i></button>
+                    </ul>
+                    <button class="menu-toggle" aria-label="Open menu"
+                        onclick="openmenu()"><i
+                            class="fas fa-bars"></i></button>
+                </nav>
+                <div class="header-text">
+                    <p>Software Engineer / Java Developer</p>
+                    <h1>Hi, I'm <span>Shubham</span><br>and I'm a Passionate<br>
+                        Java Developer</h1>
+                    <h2>Crafting Digital Solutions</h2>
+                    <h3>
+                        I specialize in software design, web development, and
+                        building intuitive app interfaces.
+                        With a passion for innovation and clean code, I help
+                        businesses turn ideas into reality.
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider"></div>
+
+        <!-- ---------about---------- -->
+        <!-- ------------- About (Extended) ------------ -->
+
+        <div id="about-extended" class="about-extended site-section" tabindex="-1">
+            <div class="container">
+                <h1 class="sub-title">About</h1>
+                <div class="row about-row">
+                    <div class="about-left">
+                        <p class="intro">
+                            Hello! I'm <span class="name">Shubham Kumar</span>,
+                            a passionate and dedicated
+                            <span class="highlight">Backend Engineer</span> with
+                            a strong foundation in
+                            Computer Science and real-world backend development.
+                        </p>
+
+                        <p>
+                            My core expertise lies in <span
+                                class="highlight">Java and Object-Oriented
+                                Programming (OOPs)</span>,
+                            where I focus on designing clean, maintainable, and
+                            scalable backend logic using the
+                            <strong>Spring Framework</strong>. I enjoy building
+                            backend services that are efficient, reliable,
+                            and easy to extend.
+                        </p>
+
+                        <p>
+                            Alongside development, I have hands-on experience in
+                            <span class="highlight">Software Testing</span>,
+                            including test case design and validation,
+                            which helps ensure application quality and
+                            stability. I strongly believe that
+                            well-tested code is essential for delivering
+                            production-ready backend systems.
+                        </p>
+
+                        <h3 class="edu-title">Education</h3>
+                        <ul class="education-list">
+                            <li>
+                                <div class="edu-head">B.Tech in Computer Science
+                                    and Engineering</div>
+                                <div class="edu-sub">Sharda University | 2023 -
+                                    2027</div>
+                            </li>
+                            <li>
+                                <div class="edu-head">12th Grade</div>
+                                <div class="edu-sub">Jamshedpur Co-operative
+                                    College | 2021 - 2023</div>
+                            </li>
+                            <li>
+                                <div class="edu-head">10th Grade</div>
+                                <div class="edu-sub">Gayatri Shiksha Niketan
+                                    High School | 2009 - 2021</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="about-right">
+                        <div class="avatar-card">
+                            <img src="about.png" alt="Shubham avatar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider"></div>
+
+        <!-- ------------- skill ----------------- -->
+        <div id="skill" class="site-section" tabindex="-1">
+            <div class="container">
+                <h1 class="sub-title">Skills</h1>
+                <div id="skillsGridContainer"
+                    class="skills-list skills-grid-container collapsed">
+                    <div class="skills-list skills-grid">
+                        <!-- Java -->
+                        <article class="skill-card" data-skill="java"
+                            onclick="showSkillDetails('java')" tabindex="0"
+                            role="button">
+                            <div class="skill-card-top">
+                                <div class="skill-icon"><i
+                                        class="fab fa-java"></i></div>
+                                <div class="card-actions">
+                                    <a class="card-action github"
+                                        href="https://github.com/shubhamkumar785/Data-Structure-Using-Java"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="View GitHub"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-brands fa-github"
+                                            aria-hidden="true"></i></a>
+                                    <a class="card-action live"
+                                        href="https://shubhamkumar785.github.io/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Open project"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"
+                                            aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <h3>Java</h3>
+                            <p>Core Java programming for backend and enterprise
+                                solutions.</p>
+                            <div class="skill-tags"><span>Core
+                                    Java</span><span>Exception
+                                    Handling</span></div>
+                        </article>
+
+                        <!-- Software Testing -->
+                        <article class="skill-card" data-skill="testing"
+                            onclick="showSkillDetails('testing')" tabindex="0"
+                            role="button">
+                            <div class="skill-card-top">
+                                <div class="skill-icon"><i
+                                        class="fa-solid fa-vial"></i></div>
+                                <div class="card-actions">
+                                    <a class="card-action github"
+                                        href="https://github.com/shubhamkumar785/JUnitTesting"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="View GitHub"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-brands fa-github"></i></a>
+                                    <a class="card-action live" href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Open project"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                            <h3>Software Testing</h3>
+                            <p>Unit/integration testing and test automation with
+                                frameworks.</p>
+                            <div
+                                class="skill-tags"><span>JUnit</span><span>Selenium</span></div>
+                        </article>
+
+                        <!-- OOPs -->
+                        <article class="skill-card" data-skill="oops"
+                            onclick="showSkillDetails('oops')" tabindex="0"
+                            role="button">
+                            <div class="skill-card-top">
+                                <div class="skill-icon"><i
+                                        class="fa-solid fa-layer-group"></i></div>
+                                <div class="card-actions">
+                                    <a class="card-action github"
+                                        href="https://github.com/shubhamkumar785/OOP-s-java"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="View GitHub"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-brands fa-github"></i></a>
+                                    <a class="card-action live" href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Open project"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                            <h3>OOP’s</h3>
+                            <p>Strong foundation in Object-Oriented Programming
+                                design and patterns.</p>
+                            <div
+                                class="skill-tags"><span>SOLID</span><span>Design
+                                    Patterns</span></div>
+                        </article>
+
+                        <!-- Java 8 -->
+                        <article class="skill-card" data-skill="java8"
+                            onclick="showSkillDetails('java8')" tabindex="0"
+                            role="button">
+                            <div class="skill-card-top">
+                                <div class="skill-icon"><i
+                                        class="fa-solid fa-code"></i></div>
+                                <div class="card-actions">
+                                    <a class="card-action github"
+                                        href="https://github.com/shubhamkumar785/java-lambda-expressions"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="View GitHub"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-brands fa-github"></i></a>
+                                    <a class="card-action live" href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Open project"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                            <h3>Java 8</h3>
+                            <p>Functional programming with Streams, Lambdas, and
+                                enhanced APIs.</p>
+                            <div
+                                class="skill-tags"><span>Streams</span><span>Lambdas</span></div>
+                        </article>
+
+                        <!-- Hibernate -->
+                        <article class="skill-card" data-skill="hibernate"
+                            onclick="showSkillDetails('hibernate')" tabindex="0"
+                            role="button">
+                            <div class="skill-card-top">
+                                <div class="skill-icon"><i
+                                        class="fa-solid fa-database"></i></div>
+                                <div class="card-actions">
+                                    <a class="card-action github"
+                                        href="https://github.com/shubhamkumar785/hibernate-maven-setup"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="View GitHub"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-brands fa-github"></i></a>
+                                    <a class="card-action live" href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Open project"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                            <h3>Hibernate</h3>
+                            <p>ORM with Hibernate for effective data mapping and
+                                persistence.</p>
+                            <div
+                                class="skill-tags"><span>JPA</span><span>ORM</span></div>
+                        </article>
+
+                        <!-- DSA -->
+                        <article class="skill-card" data-skill="dsa"
+                            onclick="showSkillDetails('dsa')" tabindex="0"
+                            role="button">
+                            <div class="skill-card-top">
+                                <div class="skill-icon"><i
+                                        class="fa-solid fa-diagram-project"></i></div>
+                                <div class="card-actions">
+                                    <a class="card-action github" href="https://github.com/shubhamkumar785/Data-Structure-Using-Java"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="View GitHub"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-brands fa-github"></i></a>
+                                    <a class="card-action live" href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Open project"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                            <h3>DSA</h3>
+                            <p>Problem solving with optimized data structures
+                                and
+                                algorithmic thinking.</p>
+                            <div class="skill-tags">
+                                <span>Arrays</span>
+                                <span>Algorithms</span>
+                            </div>
+                        </article>
+
+                        <!-- SpringBoot -->
+                        <article class="skill-card" data-skill="springboot"
+                            onclick="showSkillDetails('springboot')"
+                            tabindex="0" role="button">
+
+                            <div class="skill-card-top">
+                                <div class="skill-icon">
+                                    <i class="fa-solid fa-leaf"></i>
+                                </div>
+                                <div class="card-actions">
+                                    <a class="card-action github"
+                                        href="https://github.com/shubhamkumar785/Spring-AI-integration"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="View GitHub"
+                                        onclick="event.stopPropagation()">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a class="card-action live"
+                                        href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Open project"
+                                        onclick="event.stopPropagation()">
+                                        <i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h3>Spring Boot</h3>
+                            <p>Building production-ready REST APIs and scalable
+                                backend services.</p>
+                            <div class="skill-tags">
+                                <span>REST APIs</span>
+                                <span>Microservices</span>
+                            </div>
+                        </article>
+
+                        <!-- HTML -->
+                         <article class="skill-card" data-skill="git"
+                        onclick="showSkillDetails('git')" tabindex="0" role="button">
+                        <div class="skill-card-top">
+                            <div class="skill-icon"><i
+                                    class="fa-brands fa-git-alt"></i></div>
+                            <div class="card-actions">
+                                <a class="card-action github" href="https://github.com/shubhamkumar785" target="_blank" rel="noopener noreferrer" title="View GitHub" onclick="event.stopPropagation()"><i class="fa-brands fa-github"></i></a>
+                                <a class="card-action live" href="#" target="_blank" rel="noopener noreferrer" title="Open project" onclick="event.stopPropagation()"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3>Git & GitHub</h3>
+                        <p>Version control, collaboration, branching strategies,
+                            and CI workflows.</p>
+                        <div class="skill-tags">
+                            <span>Git</span>
+                            <span>GitHub</span>
+                        </div>
+                    </article>
+
+
+
+
+
+                        <!-- HTML -->
+                        <article class="skill-card" data-skill="html"
+                            onclick="showSkillDetails('html')" tabindex="0"
+                            role="button">
+                            <div class="skill-card-top">
+                                <div class="skill-icon"><i
+                                        class="fab fa-html5"></i></div>
+                                <div class="card-actions">
+                                    <a class="card-action github" href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="View GitHub"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-brands fa-github"></i></a>
+                                    <a class="card-action live" href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Open project"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                            <h3>HTML</h3>
+                            <p>Semantic, accessible markup for clean structure
+                                and
+                                SEO.</p>
+                            <div
+                                class="skill-tags"><span>Accessibility</span><span>SEO</span></div>
+                        </article>
+
+                        <!-- CSS -->
+                        <article class="skill-card" data-skill="css"
+                            onclick="showSkillDetails('css')" tabindex="0"
+                            role="button">
+                            <div class="skill-card-top">
+                                <div class="skill-icon"><i
+                                        class="fab fa-css3-alt"></i></div>
+                                <div class="card-actions">
+                                    <a class="card-action github" href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="View GitHub"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-brands fa-github"></i></a>
+                                    <a class="card-action live" href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Open project"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                            <h3>CSS</h3>
+                            <p>Responsive layout, modern components, Grid,
+                                Flexbox,
+                                and animations.</p>
+                            <div
+                                class="skill-tags"><span>Grid</span><span>Animations</span></div>
+                        </article>
+
+                        <!-- MySQL -->
+                        <article class="skill-card" data-skill="mysql"
+                            onclick="showSkillDetails('mysql')" tabindex="0"
+                            role="button">
+                            <div class="skill-card-top">
+                                <div class="skill-icon"><i
+                                        class="fa-solid fa-database"></i></div>
+                                <div class="card-actions">
+                                    <a class="card-action github" href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="View GitHub"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-brands fa-github"></i></a>
+                                    <a class="card-action live" href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="Open project"
+                                        onclick="event.stopPropagation()"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                            <h3>MySQL</h3>
+                            <p>Relational database design, queries, indexing,
+                                and
+                                performance tuning.</p>
+                            <div class="skill-tags">
+                                <span>SQL</span>
+                                <span>RDBMS</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for skill details -->
+        <div id="skillModal" class="modal" aria-hidden="true">
+            <div class="modal-content" tabindex="-1">
+                <span class="close" onclick="closeSkillModal()">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <ul id="modalList"></ul>
+            </div>
+        </div>
+        <!-- Modal for project details -->
+        <div id="projectModal" class="modal" aria-hidden="true">
+            <div class="modal-content" tabindex="-1">
+                <span class="close" onclick="closeProjectModal()">&times;</span>
+                <h2 id="projectModalTitle"></h2>
+                <p id="projectModalDesc"></p>
+                <ul id="projectModalList"></ul>
+                <div id="projectModalLinks" style="margin-top:12px"></div>
+            </div>
+        </div>
+        <div class="section-divider"></div>
+
+        <!-- ------------ services -------------  -->
+        <div id="services" class="site-section" tabindex="-1">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-crop-simple"></i>
+                        <h2>🧪 Software Testing</h2>
+                        <p>I test software to find bugs early and ensure it works correctly, reliably, and as expected.</p>
+                        <a href="#contact" aria-label="Open contact details to connect" title="Contact Me"> <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-crop-simple"></i>
+                        <h2>⚙️ Backend Developer</h2>
+                        <p>I build secure and efficient backend systems that handle data, logic, and server operations.</p>
+                        <a href="#contact" aria-label="Open contact details to connect" title="Contact Me"> <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>🧩 Software Design</h2>
+                        <p> I design clean and scalable software systems that are easy to maintain and grow over time.</p>
+                        <a href="#" target="_blank"> <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-crop-simple"></i>
+                        <h2>🎨 Web Design</h2>
+                        <p>I create responsive and attractive websites that offer a smooth and user-friendly experience.</p>
+                        <a href="#" target="_blank"> <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        <div class="section-divider"></div>
+
+        <!-- ----------- portfolio ------------  -->
+        <div id="portfolio" class="site-section" tabindex="-1">
+            <div class="container">
+                <h1 class="sub-title">Project</h1>
+                <div class="work-list projects-grid">
+                    <article class="project-card" data-project="weather" tabindex="0" role="button" onclick="showProjectDetails('weather')">
+                        <div class="project-card-top">
+                            <div class="project-badge"><i class="fa-solid fa-cloud-sun"></i></div>
+                            <div class="card-actions">
+                                <a class="card-action github" href="https://github.com/shubhamkumar785/WeatherApp" target="_blank" rel="noopener noreferrer" title="View GitHub" onclick="event.stopPropagation()"><i class="fa-brands fa-github"></i></a>
+                                <a class="card-action live" href="https://shubhamkumar785.github.io/WeatherApp/" target="_blank" rel="noopener noreferrer" title="Open Live Demo" onclick="event.stopPropagation()"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3>Weather Application</h3>
+                        <p>Real-time weather data with search functionality and clean UI.</p>
+                        <div class="project-tags"><span>HTML</span><span>API</span><span>JavaScript</span></div>
+                    </article>
+
+                    <article class="project-card" data-project="portfolio" tabindex="0" role="button" onclick="showProjectDetails('portfolio')">
+                        <div class="project-card-top">
+                            <div class="project-badge"><i class="fa-solid fa-file-code"></i></div>
+                            <div class="card-actions">
+                                <a class="card-action github" href="https://github.com/shubhamkumar785/Shubham-Portfolio" target="_blank" rel="noopener noreferrer" title="View GitHub" onclick="event.stopPropagation()"><i class="fa-brands fa-github"></i></a>
+                                <a class="card-action live" href="https://shubhamkumar785.github.io/Shubham-Portfolio/" target="_blank" rel="noopener noreferrer" title="Open Live Demo" onclick="event.stopPropagation()"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3>Portfolio Website</h3>
+                        <p>Responsive personal portfolio showcasing skills, projects, and contact information.</p>
+                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    </article>
+
+                    <article class="project-card" data-project="todo" tabindex="0" role="button" onclick="showProjectDetails('todo')">
+                        <div class="project-card-top">
+                            <div class="project-badge"><i class="fa-solid fa-list-check"></i></div>
+                            <div class="card-actions">
+                                <a class="card-action github" href="https://github.com/shubhamkumar785/To-Do-List" target="_blank" rel="noopener noreferrer" title="View GitHub" onclick="event.stopPropagation()"><i class="fa-brands fa-github"></i></a>
+                                <a class="card-action live" href="https://shubhamkumar785.github.io/To-Do-List/" target="_blank" rel="noopener noreferrer" title="Open Live Demo" onclick="event.stopPropagation()"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3>To-Do List</h3>
+                        <p>Simple and responsive task manager with local storage persistence.</p>
+                        <div class="project-tags"><span>Local Storage</span><span>Vanilla JS</span></div>
+                    </article>
+
+                    <article class="project-card" data-project="calculator" tabindex="0" role="button" onclick="showProjectDetails('calculator')">
+                        <div class="project-card-top">
+                            <div class="project-badge"><i class="fa-solid fa-calculator"></i></div>
+                            <div class="card-actions">
+                                <a class="card-action github" href="https://github.com/shubhamkumar785/CalculatorApp" target="_blank" rel="noopener noreferrer" title="View GitHub" onclick="event.stopPropagation()"><i class="fa-brands fa-github"></i></a>
+                                <a class="card-action live" href="https://shubhamkumar785.github.io/CalculatorApp/" target="_blank" rel="noopener noreferrer" title="Open Live Demo" onclick="event.stopPropagation()"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3>Calculator Application</h3>
+                        <p>Java Swing based desktop-style calculator demonstrating core Java concepts.</p>
+                        <div class="project-tags"><span>Java Swing</span><span>GUI</span></div>
+                    </article>
+                    
+                      
+
+                </div>
+            </div>
+        </div>
+        <div class="section-divider"></div>
+
+        <!-- ----------- contact -----------  -->
+        <div id="contact" class="site-section" tabindex="-1">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p>2023286582.shubham@ug.sharda.ac.in</p>
+                        <p>&#9742; +91-7858024086</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/shubhxm._/"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://x.com/Shubham40675702"><i
+                                    class="fa-brands fa-twitter-square"></i></a>
+                            <a
+                                href="https://www.linkedin.com/in/shubham-kumar-5a85032a6/"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://facebook.com/"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                        </div>
+                        <div class="vertical-links">
+                            <a href="PersonalResume-1.pdf" download
+                                class="btn btn2">Download Resume</a>
+                            <a href="https://github.com/shubhamkumar785"
+                                target="_blank" class="btn btn2">GitHub</a>
+                            <a
+                                href="https://www.linkedin.com/in/shubham-kumar-5a85032a6/"
+                                target="_blank" class="btn btn2">LinkedIn</a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form class="submit-to-google-sheet">
+                            <input type="text" name="Name"
+                                placeholder="Your Name" required>
+                            <input type="email" name="email"
+                                placeholder="Your Email" required>
+                            <textarea name="Message" rows="6"
+                                placeholder="Your Message"></textarea>
+                            <button type="submit"
+                                class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; Shubham Kumar 2025. All rights reserved.</p>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
