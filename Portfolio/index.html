@@ -622,15 +622,20 @@
                         </div>
                     </div>
                     <div class="contact-right">
-                        <form class="submit-to-google-sheet">
+                        <form name="submit-to-google-sheet" class="submit-to-google-sheet">
                             <input type="text" name="Name"
                                 placeholder="Your Name" required>
-                            <input type="email" name="email"
+                            <input type="email" name="Email"
                                 placeholder="Your Email" required>
                             <textarea name="Message" rows="6"
                                 placeholder="Your Message"></textarea>
                             <button type="submit"
                                 class="btn btn2">Submit</button>
+                            <p id="form-status" class="form-status" aria-live="polite" style="margin-top:8px"></p>
+                            <div id="thank-you" class="thank-you" aria-live="polite" style="display:none; margin-top:8px">
+                                <p style="margin:0; font-weight:600;">Thank you — your message was sent!</p>
+                                <button id="send-another" class="btn btn2" style="margin-top:8px">Send another</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -641,5 +646,52 @@
         </div>
 
         <script src="index.js"></script>
+
+        <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzElWcpHiI0mk6kFKFtxjsEScWQXL2p0JrESNk-9bVpc_BYCqQwbYlfhtEwZu97NZDN/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+    const statusEl = document.getElementById('form-status')
+    const submitButton = form.querySelector('button[type="submit"]')
+    const thankYouEl = document.getElementById('thank-you')
+    const sendAnotherBtn = document.getElementById('send-another')
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        statusEl.textContent = 'Sending...'
+        submitButton.disabled = true
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(async response => {
+                const text = await response.text()
+                console.log('Response status:', response.status, response.statusText)
+                console.log('Response body:', text)
+                if (response.ok) {
+                    statusEl.textContent = ''
+                    form.reset()
+                    // hide form and show thank-you message
+                    form.style.display = 'none'
+                    thankYouEl.style.display = 'block'
+                } else {
+                    statusEl.textContent = 'Submission failed: ' + (text || response.statusText)
+                    console.error('Submission failed', response.status, text)
+                }
+            })
+            .catch(error => {
+                console.error('Error!', error)
+                statusEl.textContent = 'There was an error sending your message. Check console for details.'
+            })
+            .finally(() => {
+                submitButton.disabled = false
+                setTimeout(() => { statusEl.textContent = '' }, 5000)
+            })
+    })
+
+    sendAnotherBtn.addEventListener('click', e => {
+        thankYouEl.style.display = 'none'
+        form.style.display = ''
+        form.querySelector('[name="Name"]').focus()
+    })
+</script>
     </body>
 </html>
