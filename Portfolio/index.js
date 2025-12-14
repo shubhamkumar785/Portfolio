@@ -26,15 +26,8 @@ function closemenu(){
   
 
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbw3OYjHoEg7HOfiVjF3Sk4qqjf9YvrYZ-J_8DfxetqakBcE-rBs3amuRH_VfYTJYRHpPQ/exec'
-  const form = document.forms['submit-to-google-sheet']
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
+    // Form submission handler is implemented in the page-specific inline script
+    // to provide better UI feedback and avoid duplicate handlers.
 
     // make sure menu opens and closes using the show class on sidemenu
     // the openmenu/closemenu above are used by inline onclick handlers in HTML
