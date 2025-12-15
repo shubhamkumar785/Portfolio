@@ -23,14 +23,6 @@ function closemenu(){
     sidemenu.classList.remove('show');
     document.body.classList.remove('menu-open');
 }
-  
-
-
-    // Form submission handler is implemented in the page-specific inline script
-    // to provide better UI feedback and avoid duplicate handlers.
-
-    // make sure menu opens and closes using the show class on sidemenu
-    // the openmenu/closemenu above are used by inline onclick handlers in HTML
     function showMoreProjects() {
         const extraWork = document.querySelector('.extra-work');
         extraWork.style.display = 'flex'; // Use flex/grid depending on layout
@@ -323,3 +315,4 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     });
 });
+
