@@ -23,6 +23,8 @@ function closemenu(){
     sidemenu.classList.remove('show');
     document.body.classList.remove('menu-open');
 }
+  
+
     function showMoreProjects() {
         const extraWork = document.querySelector('.extra-work');
         extraWork.style.display = 'flex'; // Use flex/grid depending on layout
@@ -47,29 +49,69 @@ function showProjectDetails(key){
     const projects = {
         weather: {
             title: 'Weather Application',
-            description: 'Real-time weather data using WeatherAPI with a clean UI and city search support.',
-            list: ['Search by city', 'Real-time weather', 'Responsive UI'],
+            description: 'A real-time weather application that fetches accurate and up-to-date weather data using WeatherAPI. The app features a clean, modern interface with fast city-based search, allowing users to instantly check current weather conditions, temperature, humidity, and wind details. Fully optimized for all devices with a responsive and user-friendly design.',
+
+list: [
+  'Search weather by city name',
+  'Live weather data powered by WeatherAPI',
+  'Displays temperature, humidity, wind speed, and weather condition',
+  'Fast and accurate API response',
+  'Clean and modern user interface',
+  'Responsive design for mobile, tablet, and desktop',
+  'User-friendly and easy-to-use layout'
+],
+
             github: 'https://github.com/shubhamkumar785/WeatherApp',
             live: 'https://shubhamkumar785.github.io/WeatherApp/'
         },
         portfolio: {
             title: 'Portfolio Website',
-            description: 'Personal portfolio showcasing skills, projects, and contact info.',
-            list: ['Responsive Layout', 'Project Showcase', 'Contact Form'],
+            description: 'A personal portfolio website designed to showcase professional skills, featured projects, and contact information in a clean and structured way. The portfolio highlights work experience, technical expertise, and achievements while providing an easy way for visitors to connect through an interactive contact section. Built with a modern, responsive design for a smooth experience across all devices.',
+
+list: [
+  'Fully responsive layout for all screen sizes',
+  'Showcase of projects with descriptions and links',
+  'Dedicated skills section with clear categorization',
+  'Interactive and user-friendly contact form',
+  'Clean and modern UI design',
+  'Smooth navigation between sections',
+  'Optimized for performance and accessibility'
+],
+
             github: 'https://github.com/shubhamkumar785/Shubham-Portfolio',
             live: 'https://shubhamkumar785.github.io/Shubham-Portfolio/'
         },
         todo: {
             title: 'To-Do List',
-            description: 'Responsive To-Do list with local storage to persist tasks across sessions.',
-            list: ['Add/Edit/Delete Tasks', 'Local Storage', 'Filter/Sort'],
+            description: 'A responsive To-Do list application designed to help users manage daily tasks efficiently. The app supports creating, editing, and deleting tasks while securely storing data in the browser using local storage, ensuring tasks persist across sessions. With a simple and intuitive interface, users can easily organize, filter, and prioritize their work.',
+
+list: [
+  'Add, edit, and delete tasks easily',
+  'Persistent task storage using browser local storage',
+  'Filter tasks by status (all, completed, pending)',
+  'Sort tasks for better organization',
+  'Responsive design for mobile and desktop devices',
+  'Clean and user-friendly interface',
+  'Lightweight and fast performance'
+],
+
             github: 'https://github.com/shubhamkumar785/To-Do-List',
             live: 'https://shubhamkumar785.github.io/To-Do-List/'
         },
         calculator: {
             title: 'Calculator Application',
-            description: 'Java Swing calculator app demonstrating core Java concepts and event handling.',
-            list: ['Arithmetic operations', 'Java Swing GUI', 'Event-driven logic'],
+            description: 'A Java Swing–based calculator application built to demonstrate core Java programming concepts and event-driven development. The app provides a graphical user interface for performing basic arithmetic operations, showcasing the use of Swing components, action listeners, and clean logical structure for handling user input and calculations.',
+
+list: [
+  'Supports basic arithmetic operations (addition, subtraction, multiplication, division)',
+  'Interactive Java Swing–based graphical user interface',
+  'Event-driven logic using action listeners',
+  'Clear separation of UI and calculation logic',
+  'Beginner-friendly implementation of core Java concepts',
+  'Lightweight and easy-to-use design',
+  'Well-structured and readable Java code'
+],
+
             github: 'https://github.com/shubhamkumar785/CalculatorApp',
             live: 'https://shubhamkumar785.github.io/CalculatorApp/'
         }
@@ -315,4 +357,3 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     });
 });
-
