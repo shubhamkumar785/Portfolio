@@ -11,24 +11,24 @@ const ProjectsSection = () => {
       title: "CampusSetu",
       category: "Full Stack",
       description: "A smart campus management platform for students and faculty with real-time features.",
-      technologies: ["Java", "Spring Boot", "Microservice", "AWS", "Docker", "GitHub", "WebSocket", "MySQL", "React"],
-      link: "#",
+      technologies: ["Java", "Spring Boot", "Microservice", "AWS", "Docker", "GitHub", "API-Gateway", "WebSocket", "MySQL", "React"],
+      link: "https://campussetu.in/",
       image: campussetuImg
     },
     {
       title: "E-Zone",
-      category: "Full Stac",
+      category: "Full Stack",
       description: "A full-stack university ERP with secure authentication, role-based dashboards, and real-time communication.",
       technologies: ["Spring Boot","React", "Microservices", "JWT", "API-Gateway", "WebSocket", "MySQL", "AWS", "Git", "GitHub", "Docker", "Ci/Cd"],
-      link: "#",
+      link: "https://github.com/shubhamkumar785/Ezone-University",
       image: null
     },
     {
       title: "ECommerce",
       category: "Full Stack",
       description: "A scalable eCommerce platform with authentication, cart, and payment integration.",
-      technologies: ["Java", "Spring Boot", "REST API", "MongoDB", "JWT", "AWS", "Git", "GitHub", "Docker"],
-      link: "#",
+      technologies: ["Java", "Spring Boot", "REST API", "spring security", "MongoDB", "JWT", "AWS", "Git", "GitHub", "Docker"],
+      link: "https://github.com/shubhamkumar785/ecommerce",
       image: ecommerceImg
     },
     {
@@ -36,7 +36,7 @@ const ProjectsSection = () => {
       category: "Web Application",
       description: "A system to manage student fee records, payments, and reports efficiently.",
       technologies: ["Java", "Swing GUI Framework", "GitHub", "JDBC", "MySQL"],
-      link: "#",
+      link: "https://github.com/shubhamkumar785/FeeManagementSystem",
       image: feemanagementImg
     },
     {
@@ -44,7 +44,7 @@ const ProjectsSection = () => {
       category: "Frontend",
       description: "A modern developer portfolio showcasing skills, projects, and experience.",
       technologies: ["HTML", "CSS", "JS", "React", "GitHub", "Git", "vercel"],
-      link: "#",
+      link: "https://shubhxm-portfolio.vercel.app/",
       image: portfolioImg
     },
     {
@@ -52,7 +52,7 @@ const ProjectsSection = () => {
       category: "AI / Web App",
       description: "An AI-powered chat assistant with voice and text interaction capabilities.",
       technologies: ["Python", "Open AI", "LLM", "RAG", "Flask", "API"],
-      link: "#",
+      link: "https://github.com/shubhamkumar785/VoiceVersaUsingPython",
       image: chatassistantImg
     }
   ]
@@ -82,7 +82,7 @@ const ProjectsSection = () => {
                   <span key={idx} className="tech-tag">{tech}</span>
                 ))}
               </div>
-              <a href={project.link} className="project-button">View Project →</a>
+              <a href={project.link} className="project-button" target="_blank" rel="noopener noreferrer">View Project →</a>
             </div>
           </div>
         ))}
