@@ -8,18 +8,18 @@ const CenterSection = () => {
       
       <div className="intro-box">
         <p className="intro-text">
-          I'm Shubham Kumar Backend and Gen AI Developer building secure and scalable systems. I specialize in Java Spring Boot, Generative AI applications, and production-ready backend solutions.
+          I'm Shubham Backend and Gen AI Developer building secure and scalable systems. I specialize in Java Spring Boot, Generative AI applications, and production-ready backend solutions.
         </p>
       </div>
       
       <div className="center-image-container">
         <img 
           src={heroImage} 
-          alt="Shubham Kumar" 
+          alt="Shubham" 
           className="center-image" 
         />
         <div className="name-label">
-          Shubham<br/>Kumar
+          Shubham
         </div>
       </div>
       

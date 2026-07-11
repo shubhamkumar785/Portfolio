@@ -9,16 +9,16 @@ const ProfileSection = () => {
           {/* Replace with: <img src="YOUR_PROFILE_IMAGE" alt="Profile" className="profile-image" /> */}
         </div>
       </div>
-      
+
       <h2 className="what-i-do">WHAT I DO ?</h2>
-      
+
       <p className="description">
         I build secure and scalable backend systems, intelligent APIs, and AI-powered applications — transforming complex ideas into reliable, efficient, and production-ready solutions.
       </p>
-      
+
       <div className="stats">
         <div className="stat-item">
-          <div className="stat-number">10+</div>
+          <div className="stat-number">5</div>
           <div className="stat-label">PROJECTS</div>
         </div>
         <div className="stat-item">
@@ -26,7 +26,7 @@ const ProfileSection = () => {
           <div className="stat-label">TECHNOLOGIES</div>
         </div>
       </div>
-      
+
       <div className="company-logos">
         <div className="company-logo">JAVA</div>
         <div className="company-logo">SPRING BOOT</div>
