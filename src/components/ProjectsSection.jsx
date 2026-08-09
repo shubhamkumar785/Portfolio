@@ -1,4 +1,5 @@
 import React from 'react'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 import campussetuImg from '../assets/images/campussetu.png'
 import ecommerceImg from '../assets/images/emmorce.png'
 import feemanagementImg from '../assets/images/feemanagement.png'
@@ -7,6 +8,7 @@ import nestLivingImg from '../assets/images/nestliving.png'
 import ezoneImg from '../assets/images/ezoneImg.png'
 
 const ProjectsSection = () => {
+  useScrollAnimation()
   const projects = [
     {
       title: "CampusSetu",
@@ -66,7 +68,7 @@ const ProjectsSection = () => {
       
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <div key={index} className={`project-card ${index % 2 === 0 ? 'reveal-left' : 'reveal-right'}`}>
+          <div key={index} className={`project-card ${index % 2 === 0 ? 'anim-from-left' : 'anim-from-right'} anim-delay-${(index % 3) + 1}`}>
             {project.image ? (
               <img src={project.image} alt={project.title} className="project-image" />
             ) : (

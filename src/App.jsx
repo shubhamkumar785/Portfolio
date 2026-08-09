@@ -5,10 +5,12 @@ import ServicesSection from './components/ServicesSection'
 import ProjectsSection from './components/ProjectsSection'
 import ContactSection from './components/ContactSection'
 import FooterSection from './components/FooterSection'
+import useScrollAnimation from './hooks/useScrollAnimation'
 import './styles/portfolio.css'
 
 function App() {
   const [showContactPage, setShowContactPage] = useState(false)
+  useScrollAnimation()
 
   const handleContactClick = () => {
     setShowContactPage(true)

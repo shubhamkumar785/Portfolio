@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const ServicesSection = () => {
   const [activeService, setActiveService] = useState(null)
+  useScrollAnimation()
 
   // Manage body scroll locking when modal is open
   useEffect(() => {
@@ -159,21 +161,26 @@ const ServicesSection = () => {
       </div>
 
       <div className="services-grid">
-        {services.map((service, index) => (
-          <article 
-            key={index} 
-            className={`service-card reveal-up delay-${(index % 3) + 1}`}
-            onClick={() => setActiveService(service)}
-          >
-            <h3 className="service-title">{service.title}</h3>
-            <p className="service-text">{service.description}</p>
-            <div className="service-tags">
-              {service.items.map((item) => (
-                <span key={item} className="service-tag">{item}</span>
-              ))}
-            </div>
-          </article>
-        ))}
+        {services.map((service, index) => {
+          const dirs = ['anim-from-left', 'anim-from-bottom', 'anim-from-right']
+          const dir = dirs[index % 3]
+          const delay = `anim-delay-${(index % 3) + 1}`
+          return (
+            <article
+              key={index}
+              className={`service-card ${dir} ${delay}`}
+              onClick={() => setActiveService(service)}
+            >
+              <h3 className="service-title">{service.title}</h3>
+              <p className="service-text">{service.description}</p>
+              <div className="service-tags">
+                {service.items.map((item) => (
+                  <span key={item} className="service-tag">{item}</span>
+                ))}
+              </div>
+            </article>
+          )
+        })}
       </div>
 
       {activeService && (

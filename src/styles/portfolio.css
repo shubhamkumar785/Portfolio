@@ -1,3 +1,58 @@
+/* =============================================
+   SCROLL-TRIGGERED ANIMATIONS
+   ============================================= */
+
+/* Keyframes */
+@keyframes slideInFromLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInFromRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInFromBottom {
+  from { opacity: 0; transform: translateY(50px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Base hidden state */
+.anim-from-left,
+.anim-from-right,
+.anim-from-bottom {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* Triggered state */
+.anim-from-left.in-view {
+  animation: slideInFromLeft 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.anim-from-right.in-view {
+  animation: slideInFromRight 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.anim-from-bottom.in-view {
+  animation: slideInFromBottom 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Staggered delays for grids */
+.anim-delay-1 { animation-delay: 0.05s !important; }
+.anim-delay-2 { animation-delay: 0.15s !important; }
+.anim-delay-3 { animation-delay: 0.25s !important; }
+.anim-delay-4 { animation-delay: 0.35s !important; }
+.anim-delay-5 { animation-delay: 0.45s !important; }
+.anim-delay-6 { animation-delay: 0.55s !important; }
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .anim-from-left,
+  .anim-from-right,
+  .anim-from-bottom {
+    opacity: 1;
+    animation: none !important;
+  }
+}
+
 /* Header Styles */
 .header {
   display: flex;
@@ -1330,13 +1385,66 @@
   transform: translateY(-2px);
 }
 
-.contact-status {
-  grid-column: 1 / -1;
-  margin: 0;
+/* Contact Success Card */
+.contact-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  color: #ff5722;
+  padding: 60px 28px;
+  border: 1.5px solid rgba(45, 45, 45, 0.14);
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 16px 42px rgba(45, 45, 45, 0.08);
+  gap: 16px;
+}
+
+.contact-success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #2d2d2d;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.contact-success-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: #2d2d2d;
+  margin: 0;
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.contact-success-desc {
+  font-size: 15px;
+  color: #4f4f4f;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 420px;
+}
+
+.contact-success-btn {
+  margin-top: 8px;
+  padding: 13px 28px;
+  border: 1.5px solid #2d2d2d;
+  border-radius: 999px;
+  background: transparent;
+  color: #2d2d2d;
   font-size: 14px;
   font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.contact-success-btn:hover {
+  background: #2d2d2d;
+  color: #ffffff;
 }
 
 /* Mobile and tablet polish */

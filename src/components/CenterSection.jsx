@@ -18,9 +18,6 @@ const CenterSection = () => {
           alt="Shubham"
           className="center-image"
         />
-        <div className="name-label">
-          Shubham
-        </div>
       </div>
 
       <div className="large-text-bottom">DEVELOPER</div>
