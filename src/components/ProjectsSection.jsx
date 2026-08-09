@@ -1,9 +1,10 @@
 import React from 'react'
 import campussetuImg from '../assets/images/campussetu.png'
-import chatassistantImg from '../assets/images/chatassistant.png'
 import ecommerceImg from '../assets/images/emmorce.png'
 import feemanagementImg from '../assets/images/feemanagement.png'
 import portfolioImg from '../assets/images/portfolio.png'
+import nestLivingImg from '../assets/images/nestliving.png'
+import ezoneImg from '../assets/images/ezoneImg.png'
 
 const ProjectsSection = () => {
   const projects = [
@@ -21,8 +22,16 @@ const ProjectsSection = () => {
       description: "A full-stack university ERP with secure authentication, role-based dashboards, and real-time communication.",
       technologies: ["Spring Boot","React", "Microservices", "JWT", "API-Gateway", "WebSocket", "MySQL", "AWS", "Git", "GitHub", "Docker", "Ci/Cd"],
       link: "https://github.com/shubhamkumar785/Ezone-University",
-      image: null
+      image: ezoneImg
     },
+    {
+  title: "NestLiving",
+  category: "Full Stack",
+  description: "A modern Home & Lifestyle eCommerce platform for furniture, home décor, lighting, ceramics, and premium living essentials with secure authentication, product catalog, cart, wishlist, and seamless checkout.",
+  technologies: ["Java","Spring Boot","React","MySQL","Hibernate","JPA","Spring Security","JWT","REST API","AWS","Git","GitHub"],
+  link: "https://github.com/shubhamkumar785/nestliving",
+  image: nestLivingImg
+},
     {
       title: "ECommerce",
       category: "Full Stack",
@@ -46,26 +55,18 @@ const ProjectsSection = () => {
       technologies: ["HTML", "CSS", "JS", "React", "GitHub", "Git", "vercel"],
       link: "https://shubhxm-portfolio.vercel.app/",
       image: portfolioImg
-    },
-    {
-      title: "Chat Assistant",
-      category: "AI / Web App",
-      description: "An AI-powered chat assistant with voice and text interaction capabilities.",
-      technologies: ["Python", "Open AI", "LLM", "RAG", "Flask", "API"],
-      link: "https://github.com/shubhamkumar785/VoiceVersaUsingPython",
-      image: chatassistantImg
     }
   ]
 
   return (
     <section className="projects-section" id="works">
-      <div className="projects-header">
+      <div className="projects-header reveal-up">
         <h2 className="projects-heading">IDEAS BROUGHT TO LIFE</h2>
       </div>
       
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <div key={index} className="project-card">
+          <div key={index} className={`project-card ${index % 2 === 0 ? 'reveal-left' : 'reveal-right'}`}>
             {project.image ? (
               <img src={project.image} alt={project.title} className="project-image" />
             ) : (

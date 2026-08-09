@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
-import DesignGallerySection from './components/DesignGallerySection'
 import ServicesSection from './components/ServicesSection'
 import ProjectsSection from './components/ProjectsSection'
 import ContactSection from './components/ContactSection'
@@ -26,6 +25,34 @@ function App() {
     window.scrollTo(0, 0)
   }, [])
 
+  // Setup Scroll Reveal Intersection Observer
+  useEffect(() => {
+    const handleObserve = () => {
+      const observerCallback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed')
+            observer.unobserve(entry.target)
+          }
+        })
+      }
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.08,
+      }
+
+      const observer = new IntersectionObserver(observerCallback, observerOptions)
+      const elements = document.querySelectorAll('.reveal-left, .reveal-right, .reveal-up, .reveal-zoom, .inverted-reveal-scroller, .scroll-fade-in, .scroll-fade-left, .scroll-fade-right')
+
+      elements.forEach((el) => observer.observe(el))
+    }
+
+    const timeoutId = setTimeout(handleObserve, 60)
+    return () => clearTimeout(timeoutId)
+  }, [showContactPage])
+
   return (
     <div className="App">
       {showContactPage ? (
@@ -40,9 +67,9 @@ function App() {
         <>
           <Header onContactClick={handleContactClick} showContactPage={showContactPage} />
           <HeroSection />
-          <DesignGallerySection />
           <ProjectsSection />
           <ServicesSection />
+          <ContactSection />
           <FooterSection />
         </>
       )}

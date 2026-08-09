@@ -9,9 +9,9 @@ const ContactSection = ({ isFullPage }) => {
   }
 
   return (
-    <section className={`contact-section ${isFullPage ? 'contact-full-page' : ''}`} id="contact">
+    <section className={`contact-section ${isFullPage ? 'contact-full-page' : ''} inverted-reveal-scroller`} id="contact">
       <div className="contact-shell">
-        <div className="contact-header">
+        <div className="contact-header reveal-up">
           <span className="contact-kicker">CONTACT</span>
           <h2 className="contact-heading">LET&apos;S TALK</h2>
           <p className="contact-description">
@@ -19,7 +19,7 @@ const ContactSection = ({ isFullPage }) => {
           </p>
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form reveal-up delay-2" onSubmit={handleSubmit}>
           <div className="contact-field">
             <label htmlFor="contact-name">Name</label>
             <input id="contact-name" name="name" type="text" placeholder="Your name" required />

@@ -39,7 +39,7 @@ const Header = ({ onContactClick, showContactPage }) => {
         )}
         <a href="#contact" className="nav-link" onClick={handleContactClick}>Contact</a>
         <a href={resumePdf} className="resume-button" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
-          <span className="download-icon">↓</span>
+          <span className=""></span>
           Resume
         </a>
       </nav>

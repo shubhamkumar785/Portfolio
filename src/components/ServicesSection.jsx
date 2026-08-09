@@ -153,7 +153,7 @@ const ServicesSection = () => {
 
   return (
     <section className="services-section" id="services">
-      <div className="services-header">
+      <div className="services-header reveal-up">
         <span className="services-kicker">SERVICES</span>
         <h2 className="services-heading">WHAT I PROVIDE</h2>
       </div>
@@ -162,7 +162,7 @@ const ServicesSection = () => {
         {services.map((service, index) => (
           <article 
             key={index} 
-            className="service-card"
+            className={`service-card reveal-up delay-${(index % 3) + 1}`}
             onClick={() => setActiveService(service)}
           >
             <h3 className="service-title">{service.title}</h3>

@@ -165,11 +165,11 @@ const FooterSection = () => {
   }
 
   return (
-    <section className="footer-section" id="footer">
+    <section className="footer-section inverted-reveal-scroller" id="footer">
       <div className="footer-inner">
 
         {/* Top: LET'S WORK Together */}
-        <div className="footer-main">
+        <div className="footer-main reveal-up">
           <div className="footer-center">
             <div className="footer-title-wrap">
               <h2 className="footer-title" style={{ letterSpacing: '8px' }}>LET&apos;S WORK</h2>
@@ -181,7 +181,7 @@ const FooterSection = () => {
         {/* Main footer columns */}
         <div className="footer-columns">
           {/* Quick Links */}
-          <div className="footer-col">
+          <div className="footer-col reveal-up delay-1">
             <h4 className="footer-col-heading">QUICK LINKS</h4>
             <ul className="footer-col-list">
               <li><a href="#home" className="footer-col-link" onClick={(e) => handleLinkClick(e, 'Home')}>Home</a></li>
@@ -192,7 +192,7 @@ const FooterSection = () => {
           </div>
 
           {/* Services */}
-          <div className="footer-col">
+          <div className="footer-col reveal-up delay-2">
             <h4 className="footer-col-heading">SERVICES</h4>
             <ul className="footer-col-list">
               <li><a href="#services" className="footer-col-link" onClick={(e) => handleLinkClick(e, 'Backend Development')}>Backend Development</a></li>
@@ -203,7 +203,7 @@ const FooterSection = () => {
           </div>
 
           {/* Contact */}
-          <div className="footer-col">
+          <div className="footer-col reveal-up delay-3">
             <h4 className="footer-col-heading">CONTACT</h4>
             <ul className="footer-col-list footer-contact-list">
               <li className="footer-contact-item" style={{ cursor: 'pointer' }} onClick={(e) => handleLinkClick(e, 'India')}>

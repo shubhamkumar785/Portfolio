@@ -4,7 +4,7 @@ import ScrollIndicator from './ScrollIndicator'
 
 const RightSection = () => {
   return (
-    <div className="right-column">
+    <div className="right-column reveal-right delay-2">
       <h2 className="question-text">WHO AM I ?</h2>
       
       <p className="intro-description">

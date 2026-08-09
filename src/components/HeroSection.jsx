@@ -5,7 +5,7 @@ import RightSection from './RightSection'
 
 const HeroSection = () => {
   return (
-    <section className="hero-section">
+    <section className="hero-section" id="about">
       <div className="hero-grid">
         <ProfileSection />
         <CenterSection />

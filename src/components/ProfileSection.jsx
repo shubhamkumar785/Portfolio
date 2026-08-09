@@ -2,12 +2,17 @@ import React from 'react'
 
 const ProfileSection = () => {
   return (
-    <div className="left-column">
-      <div className="profile-image-container">
-        <div className="profile-image">
-          {/* Placeholder for profile image */}
-          {/* Replace with: <img src="YOUR_PROFILE_IMAGE" alt="Profile" className="profile-image" /> */}
+    <div className="left-column reveal-left">
+      <div className="intro-profile-card">
+        <div className="intro-badge">
+          <span>HI THERE!</span>
         </div>
+        <h1 className="intro-name">Shubham</h1>
+        <p className="intro-role">Backend & Gen AI Engineer</p>
+        <p className="intro-short-desc">
+          Crafting scalable microservices, resilient APIs, and intelligent AI-powered solutions.
+        </p>
+
       </div>
 
       <h2 className="what-i-do">WHAT I DO ?</h2>
