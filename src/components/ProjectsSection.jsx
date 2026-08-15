@@ -4,12 +4,20 @@ import campussetuImg from '../assets/images/campussetu.png'
 import ecommerceImg from '../assets/images/emmorce.png'
 import feemanagementImg from '../assets/images/feemanagement.png'
 import portfolioImg from '../assets/images/portfolio.png'
-import nestLivingImg from '../assets/images/nestliving.png'
+import nestLivingImg from '../assets/images/nestLiving.png'
 import ezoneImg from '../assets/images/ezoneImg.png'
 
 const ProjectsSection = () => {
   useScrollAnimation()
   const projects = [
+    {
+      title: "NestLiving",
+      category: "Full Stack",
+      description: "A modern Home & Lifestyle eCommerce platform for furniture, home décor, lighting, ceramics, and premium living essentials with secure authentication, product catalog, cart, wishlist, and seamless checkout.",
+      technologies: ["Java", "Spring Boot", "React", "MySQL", "Hibernate", "JPA", "Spring Security", "JWT", "REST API", "AWS", "Git", "GitHub"],
+      link: "https://nestliving.vercel.app/",
+      image: nestLivingImg
+    },
     {
       title: "CampusSetu",
       category: "Full Stack",
@@ -22,18 +30,10 @@ const ProjectsSection = () => {
       title: "E-Zone",
       category: "Full Stack",
       description: "A full-stack university ERP with secure authentication, role-based dashboards, and real-time communication.",
-      technologies: ["Spring Boot","React", "Microservices", "JWT", "API-Gateway", "WebSocket", "MySQL", "AWS", "Git", "GitHub", "Docker", "Ci/Cd"],
-      link: "https://github.com/shubhamkumar785/Ezone-University",
+      technologies: ["Spring Boot", "React", "Microservices", "JWT", "API-Gateway", "WebSocket", "MySQL", "AWS", "Git", "GitHub", "Docker", "Ci/Cd"],
+      link: "https://ezone-university.vercel.app",
       image: ezoneImg
     },
-    {
-  title: "NestLiving",
-  category: "Full Stack",
-  description: "A modern Home & Lifestyle eCommerce platform for furniture, home décor, lighting, ceramics, and premium living essentials with secure authentication, product catalog, cart, wishlist, and seamless checkout.",
-  technologies: ["Java","Spring Boot","React","MySQL","Hibernate","JPA","Spring Security","JWT","REST API","AWS","Git","GitHub"],
-  link: "https://github.com/shubhamkumar785/nestliving",
-  image: nestLivingImg
-},
     {
       title: "ECommerce",
       category: "Full Stack",
@@ -65,7 +65,7 @@ const ProjectsSection = () => {
       <div className="projects-header reveal-up">
         <h2 className="projects-heading">IDEAS BROUGHT TO LIFE</h2>
       </div>
-      
+
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div key={index} className={`project-card ${index % 2 === 0 ? 'anim-from-left' : 'anim-from-right'} anim-delay-${(index % 3) + 1}`}>

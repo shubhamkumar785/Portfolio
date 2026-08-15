@@ -8,6 +8,29 @@ const ContactSection = ({ isFullPage }) => {
     setSubmitted(true)
   }
 
+  const handleNewMessage = () => {
+    setSubmitted(false)
+  }
+
+  if (submitted) {
+    return (
+      <section className={`contact-section ${isFullPage ? 'contact-full-page' : ''}`} id="contact">
+        <div className="contact-shell">
+          <div className="contact-success">
+            <div className="contact-success-icon">✓</div>
+            <h3 className="contact-success-title">Message Received!</h3>
+            <p className="contact-success-desc">
+              Thank you for reaching out. I've received your message and will get back to you within 24 hours.
+            </p>
+            <button className="contact-success-btn" onClick={handleNewMessage}>
+              Send Another Message
+            </button>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
   return (
     <section className={`contact-section ${isFullPage ? 'contact-full-page' : ''} inverted-reveal-scroller`} id="contact">
       <div className="contact-shell">
@@ -41,10 +64,6 @@ const ContactSection = ({ isFullPage }) => {
           </div>
 
           <button className="contact-submit" type="submit">Submit</button>
-
-          {submitted && (
-            <p className="contact-status">Thanks. Your message details are ready.</p>
-          )}
         </form>
       </div>
     </section>

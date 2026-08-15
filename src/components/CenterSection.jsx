@@ -6,12 +6,6 @@ const CenterSection = () => {
     <div className="center-section reveal-up delay-1">
       <div className="large-text-top">BACKEND</div>
 
-      <div className="intro-box">
-        <p className="intro-text">
-          I'm Shubham Backend and Gen AI Developer building secure and scalable systems. I specialize in Java Spring Boot, Generative AI applications, and production-ready backend solutions.
-        </p>
-      </div>
-
       <div className="center-image-container">
         <img
           src={heroImage}
