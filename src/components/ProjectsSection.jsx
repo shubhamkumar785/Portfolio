@@ -85,7 +85,7 @@ const ProjectsSection = () => {
                   <span key={idx} className="tech-tag">{tech}</span>
                 ))}
               </div>
-              <a href={project.link} className="project-button" target="_blank" rel="noopener noreferrer">View Project →</a>
+              <a href={project.link} className="project-button" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
           </div>
         ))}
