@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import useScrollAnimation from '../hooks/useScrollAnimation'
 import campussetuImg from '../assets/images/campussetu.png'
 import ecommerceImg from '../assets/images/emmorce.png'
@@ -6,10 +6,21 @@ import feemanagementImg from '../assets/images/feemanagement.png'
 import portfolioImg from '../assets/images/portfolio.png'
 import nestLivingImg from '../assets/images/nestLiving.png'
 import ezoneImg from '../assets/images/ezoneImg.png'
+import poonamPrintingShopImg from '../assets/images/PoonamPrintingShop.png'
 
 const ProjectsSection = () => {
   useScrollAnimation()
+  const [showAll, setShowAll] = useState(false)
+  
   const projects = [
+    {
+      title: "Poonam Printing Shop",
+      category: "MERN",
+      description: "A modern printing shop management system with customer order tracking, real-time order status updates, invoice generation, and admin dashboard for managing products, pricing, and customer requests efficiently.",
+      technologies: ["Express.js", "React", "Node.js", "REST API", "JWT", "Stripe", "Git", "GitHub", "Vercel"],
+      link: "https://poonam-printing-shop.vercel.app/",
+      image: poonamPrintingShopImg
+    },
     {
       title: "NestLiving",
       category: "Full Stack",
@@ -60,6 +71,10 @@ const ProjectsSection = () => {
     }
   ]
 
+  // Show only 6 projects (2 rows) initially
+  const projectsToShow = showAll ? projects : projects.slice(0, 6)
+  const hasMoreProjects = projects.length > 6
+
   return (
     <section className="projects-section" id="works">
       <div className="projects-header reveal-up">
@@ -67,7 +82,7 @@ const ProjectsSection = () => {
       </div>
 
       <div className="projects-grid">
-        {projects.map((project, index) => (
+        {projectsToShow.map((project, index) => (
           <div key={index} className={`project-card ${index % 2 === 0 ? 'anim-from-left' : 'anim-from-right'} anim-delay-${(index % 3) + 1}`}>
             {project.image ? (
               <img src={project.image} alt={project.title} className="project-image" />
@@ -90,6 +105,23 @@ const ProjectsSection = () => {
           </div>
         ))}
       </div>
+
+      {hasMoreProjects && (
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
+          <button 
+            onClick={() => setShowAll(!showAll)}
+            className="project-button"
+            style={{ 
+              padding: '12px 28px',
+              fontSize: '14px',
+              cursor: 'pointer',
+              border: 'none'
+            }}
+          >
+            {showAll ? 'Show Less Projects' : 'Show All Projects'}
+          </button>
+        </div>
+      )}
     </section>
   )
 }
