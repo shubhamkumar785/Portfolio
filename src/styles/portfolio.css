@@ -1863,6 +1863,10 @@ html {
     white-space: normal;
   }
 
+  .footer-brand-tagline {
+    display: none;
+  }
+
   .footer-together {
     top: 58px;
     font-size: clamp(38px, 10vw, 56px);

@@ -3,7 +3,21 @@ import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const ServicesSection = () => {
   const [activeService, setActiveService] = useState(null)
+  const [showAll, setShowAll] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   useScrollAnimation()
+
+  // Detect screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   // Manage body scroll locking when modal is open
   useEffect(() => {
@@ -145,6 +159,11 @@ const ServicesSection = () => {
     }
   ]
 
+  // Show 3 services on mobile, 6 on desktop
+  const initialServiceCount = isMobile ? 3 : 6
+  const servicesToShow = showAll ? services : services.slice(0, initialServiceCount)
+  const hasMoreServices = services.length > initialServiceCount
+
   const closeModal = () => setActiveService(null)
 
   const handleOverlayClick = (e) => {
@@ -161,7 +180,7 @@ const ServicesSection = () => {
       </div>
 
       <div className="services-grid">
-        {services.map((service, index) => {
+        {servicesToShow.map((service, index) => {
           const dirs = ['anim-from-left', 'anim-from-bottom', 'anim-from-right']
           const dir = dirs[index % 3]
           const delay = `anim-delay-${(index % 3) + 1}`
@@ -182,6 +201,30 @@ const ServicesSection = () => {
           )
         })}
       </div>
+
+      {hasMoreServices && (
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
+          <button 
+            onClick={() => setShowAll(!showAll)}
+            className="project-button"
+            style={{ 
+              padding: '12px 28px',
+              fontSize: '14px',
+              cursor: 'pointer',
+              border: 'none',
+              backgroundColor: '#2d2d2d',
+              color: 'white',
+              borderRadius: '5px',
+              fontWeight: '600',
+              transition: 'background-color 0.3s ease'
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = '#000'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = '#2d2d2d'}
+          >
+            {showAll ? 'View Less Services' : (isMobile ? 'View More Services' : 'View All Services')}
+          </button>
+        </div>
+      )}
 
       {activeService && (
         <div className="services-modal-overlay animate-fade-in" onClick={handleOverlayClick}>

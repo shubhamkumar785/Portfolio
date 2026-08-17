@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import useScrollAnimation from '../hooks/useScrollAnimation'
 import campussetuImg from '../assets/images/campussetu.png'
 import ecommerceImg from '../assets/images/emmorce.png'
@@ -11,6 +11,19 @@ import poonamPrintingShopImg from '../assets/images/PoonamPrintingShop.png'
 const ProjectsSection = () => {
   useScrollAnimation()
   const [showAll, setShowAll] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Detect screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
   
   const projects = [
     {
@@ -71,9 +84,10 @@ const ProjectsSection = () => {
     }
   ]
 
-  // Show only 6 projects (2 rows) initially
-  const projectsToShow = showAll ? projects : projects.slice(0, 6)
-  const hasMoreProjects = projects.length > 6
+  // Show 3 projects on mobile, 6 on desktop
+  const initialProjectCount = isMobile ? 3 : 6
+  const projectsToShow = showAll ? projects : projects.slice(0, initialProjectCount)
+  const hasMoreProjects = projects.length > initialProjectCount
 
   return (
     <section className="projects-section" id="works">
@@ -85,7 +99,13 @@ const ProjectsSection = () => {
         {projectsToShow.map((project, index) => (
           <div key={index} className={`project-card ${index % 2 === 0 ? 'anim-from-left' : 'anim-from-right'} anim-delay-${(index % 3) + 1}`}>
             {project.image ? (
-              <img src={project.image} alt={project.title} className="project-image" />
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                className="project-image" 
+                loading="lazy"
+                decoding="async"
+              />
             ) : (
               <div className="project-image-placeholder">
                 <span>{project.title}</span>
@@ -118,7 +138,7 @@ const ProjectsSection = () => {
               border: 'none'
             }}
           >
-            {showAll ? 'Show Less Projects' : 'Show All Projects'}
+            {showAll ? (isMobile ? 'Show Less Projects' : 'Show Less Projects') : (isMobile ? 'Show More Projects' : 'Show All Projects')}
           </button>
         </div>
       )}

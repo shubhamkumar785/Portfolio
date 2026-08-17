@@ -1,12 +1,27 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, lazy, Suspense } from 'react'
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
-import ServicesSection from './components/ServicesSection'
-import ProjectsSection from './components/ProjectsSection'
-import ContactSection from './components/ContactSection'
-import FooterSection from './components/FooterSection'
 import useScrollAnimation from './hooks/useScrollAnimation'
 import './styles/portfolio.css'
+
+// Lazy load components that are below the fold
+const ServicesSection = lazy(() => import('./components/ServicesSection'))
+const ProjectsSection = lazy(() => import('./components/ProjectsSection'))
+const ContactSection = lazy(() => import('./components/ContactSection'))
+const FooterSection = lazy(() => import('./components/FooterSection'))
+
+// Loading fallback component
+const LoadingFallback = () => (
+  <div style={{ 
+    minHeight: '200px', 
+    display: 'flex', 
+    alignItems: 'center', 
+    justifyContent: 'center',
+    color: '#2d2d2d'
+  }}>
+    Loading...
+  </div>
+)
 
 function App() {
   const [showContactPage, setShowContactPage] = useState(false)
@@ -63,16 +78,20 @@ function App() {
           <button className="back-button" onClick={handleBackClick}>
             ← Back
           </button>
-          <ContactSection isFullPage={true} />
+          <Suspense fallback={<LoadingFallback />}>
+            <ContactSection isFullPage={true} />
+          </Suspense>
         </div>
       ) : (
         <>
           <Header onContactClick={handleContactClick} showContactPage={showContactPage} />
           <HeroSection />
-          <ProjectsSection />
-          <ServicesSection />
-          <ContactSection />
-          <FooterSection />
+          <Suspense fallback={<LoadingFallback />}>
+            <ProjectsSection />
+            <ServicesSection />
+            <ContactSection />
+            <FooterSection />
+          </Suspense>
         </>
       )}
     </div>
