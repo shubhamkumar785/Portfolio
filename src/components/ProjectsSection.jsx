@@ -18,20 +18,20 @@ const ProjectsSection = () => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 1024)
     }
-    
+
     checkMobile()
     window.addEventListener('resize', checkMobile)
-    
+
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
-  
+
   const projects = [
     {
       title: "Poonam Printing Shop",
       category: "MERN",
       description: "A modern printing shop management system with customer order tracking, real-time order status updates, invoice generation, and admin dashboard for managing products, pricing, and customer requests efficiently.",
       technologies: ["Express.js", "React", "Node.js", "REST API", "JWT", "Stripe", "Git", "GitHub", "Vercel"],
-      link: "https://poonam-printing-shop.vercel.app/",
+      link: "https://poonam-printing.vercel.app/",
       image: poonamPrintingShopImg
     },
     {
@@ -99,10 +99,10 @@ const ProjectsSection = () => {
         {projectsToShow.map((project, index) => (
           <div key={index} className={`project-card ${index % 2 === 0 ? 'anim-from-left' : 'anim-from-right'} anim-delay-${(index % 3) + 1}`}>
             {project.image ? (
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="project-image" 
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-image"
                 loading="lazy"
                 decoding="async"
               />
@@ -128,10 +128,10 @@ const ProjectsSection = () => {
 
       {hasMoreProjects && (
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
-          <button 
+          <button
             onClick={() => setShowAll(!showAll)}
             className="project-button"
-            style={{ 
+            style={{
               padding: '12px 28px',
               fontSize: '14px',
               cursor: 'pointer',
