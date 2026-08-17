@@ -830,7 +830,9 @@
 }
 
 .project-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: #2d2d2d;
   color: white;
   padding: 7px 14px;
@@ -3623,6 +3625,10 @@ body, .App {
   .project-button {
     font-size: 10px;
     padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
 
@@ -4409,6 +4415,10 @@ body, .App {
   .project-button {
     font-size: 9px;
     padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .service-card {
