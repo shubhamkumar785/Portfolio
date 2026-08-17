@@ -1858,11 +1858,14 @@ html {
     border-radius: 18px;
     background: #ffffff !important;
     border: 2px solid rgba(45, 45, 45, 0.25) !important;
+    box-shadow: 0 8px 24px rgba(45, 45, 45, 0.12) !important;
+    opacity: 1 !important;
   }
 
   .contact-field label {
     color: #2d2d2d !important;
     font-weight: 800 !important;
+    opacity: 1 !important;
   }
 
   .contact-field input,
@@ -1870,17 +1873,23 @@ html {
     background: #ffffff !important;
     color: #2d2d2d !important;
     border: 1.5px solid rgba(45, 45, 45, 0.3) !important;
+    opacity: 1 !important;
+    -webkit-appearance: none !important;
+    -webkit-text-fill-color: #2d2d2d !important;
   }
 
   .contact-field input::placeholder,
   .contact-field textarea::placeholder {
     color: #888888 !important;
     opacity: 1 !important;
+    -webkit-text-fill-color: #888888 !important;
   }
 
   .contact-submit {
     background: #2d2d2d !important;
     color: #ffffff !important;
+    opacity: 1 !important;
+    -webkit-appearance: none !important;
   }
 
   .footer-title {
@@ -1889,6 +1898,7 @@ html {
     letter-spacing: 1px !important;
     white-space: normal;
     color: #ffffff !important;
+    opacity: 1 !important;
   }
 
   .footer-brand-tagline {
@@ -1899,6 +1909,7 @@ html {
     top: 58px;
     font-size: clamp(38px, 10vw, 56px);
     color: #f05a2a !important;
+    opacity: 1 !important;
   }
 
   .footer-columns {
@@ -1915,10 +1926,35 @@ html {
 
   .footer-col-heading {
     color: #ffffff !important;
+    opacity: 1 !important;
   }
 
   .footer-col-link {
     color: #a5a5a5 !important;
+    opacity: 1 !important;
+  }
+
+  .footer-col-link:hover {
+    color: #ffffff !important;
+  }
+
+  .footer-contact-item {
+    justify-content: center;
+    color: #a5a5a5 !important;
+    opacity: 1 !important;
+  }
+
+  .footer-contact-icon {
+    color: #f05a2a !important;
+    opacity: 1 !important;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #6b6b6b !important;
+    opacity: 1 !important;
+  }
   }
 
   .footer-col-link:hover {
@@ -2050,11 +2086,14 @@ html {
     padding: 18px;
     background: #ffffff !important;
     border: 2px solid rgba(45, 45, 45, 0.25) !important;
+    box-shadow: 0 8px 24px rgba(45, 45, 45, 0.12) !important;
+    opacity: 1 !important;
   }
 
   .contact-field label {
     color: #2d2d2d !important;
     font-weight: 800 !important;
+    opacity: 1 !important;
   }
 
   .contact-field input,
@@ -2064,18 +2103,24 @@ html {
     background: #ffffff !important;
     color: #2d2d2d !important;
     border: 1.5px solid rgba(45, 45, 45, 0.3) !important;
+    opacity: 1 !important;
+    -webkit-appearance: none !important;
+    -webkit-text-fill-color: #2d2d2d !important;
   }
 
   .contact-field input::placeholder,
   .contact-field textarea::placeholder {
     color: #888888 !important;
     opacity: 1 !important;
+    -webkit-text-fill-color: #888888 !important;
   }
 
   .contact-submit {
     width: 100%;
     background: #2d2d2d !important;
     color: #ffffff !important;
+    opacity: 1 !important;
+    -webkit-appearance: none !important;
   }
 
   .project-image,
@@ -3687,6 +3732,8 @@ body, .App {
 @media (max-width: 430px) {
   .contact-section {
     padding: 32px 16px 56px;
+    background-color: #fbf8f1 !important;
+    opacity: 1 !important;
   }
 
   .contact-header {
@@ -3697,18 +3744,21 @@ body, .App {
     font-size: 11px;
     letter-spacing: 2px;
     color: #ff5722 !important;
+    opacity: 1 !important;
   }
 
   .contact-heading {
     font-size: clamp(36px, 12vw, 48px);
     letter-spacing: 2px;
     color: #2d2d2d !important;
+    opacity: 1 !important;
   }
 
   .contact-description {
     font-size: 13px;
     line-height: 1.6;
     color: #4f4f4f !important;
+    opacity: 1 !important;
   }
 
   .contact-form {
@@ -3717,6 +3767,8 @@ body, .App {
     gap: 14px;
     background: #ffffff !important;
     border: 2px solid rgba(45, 45, 45, 0.3) !important;
+    box-shadow: 0 8px 24px rgba(45, 45, 45, 0.12) !important;
+    opacity: 1 !important;
   }
 
   .contact-field label {
@@ -3724,6 +3776,7 @@ body, .App {
     letter-spacing: 1px;
     color: #2d2d2d !important;
     font-weight: 800 !important;
+    opacity: 1 !important;
   }
 
   .contact-field input,
@@ -3734,12 +3787,16 @@ body, .App {
     background: #ffffff !important;
     color: #2d2d2d !important;
     border: 1.5px solid rgba(45, 45, 45, 0.35) !important;
+    opacity: 1 !important;
+    -webkit-appearance: none !important;
+    -webkit-text-fill-color: #2d2d2d !important;
   }
 
   .contact-field input::placeholder,
   .contact-field textarea::placeholder {
     color: #888888 !important;
     opacity: 1 !important;
+    -webkit-text-fill-color: #888888 !important;
   }
 
   .contact-field textarea {
@@ -3752,6 +3809,8 @@ body, .App {
     border-radius: 999px;
     background: #2d2d2d !important;
     color: #ffffff !important;
+    opacity: 1 !important;
+    -webkit-appearance: none !important;
   }
   }
 
@@ -3795,6 +3854,7 @@ body, .App {
   .footer-section {
     padding: 20px 16px 14px;
     background: #2d2d2d !important;
+    opacity: 1 !important;
   }
 
   .footer-brand-row {
@@ -3809,6 +3869,7 @@ body, .App {
   .footer-brand-title {
     font-size: 24px;
     color: #ffffff !important;
+    opacity: 1 !important;
   }
 
   .footer-brand-tagline {
@@ -3820,6 +3881,8 @@ body, .App {
     border: 1px solid rgba(255, 255, 255, 0.18) !important;
     background: rgba(255, 255, 255, 0.06) !important;
     color: #a5a5a5 !important;
+    opacity: 1 !important;
+    -webkit-appearance: none !important;
   }
 
   .footer-social-btn:hover {
@@ -3845,12 +3908,14 @@ body, .App {
     font-size: clamp(38px, 12vw, 48px);
     letter-spacing: -1.5px;
     color: #ffffff !important;
+    opacity: 1 !important;
   }
 
   .footer-together {
     top: 32px;
     font-size: clamp(28px, 8.5vw, 34px);
     color: #f05a2a !important;
+    opacity: 1 !important;
   }
 
   .footer-columns {
@@ -3874,6 +3939,7 @@ body, .App {
     margin-bottom: 8px;
     text-align: center;
     color: #ffffff !important;
+    opacity: 1 !important;
   }
 
   .footer-col-link,
@@ -3881,6 +3947,7 @@ body, .App {
     font-size: 13px;
     text-align: center;
     color: #a5a5a5 !important;
+    opacity: 1 !important;
   }
 
   .footer-col-link:hover {
@@ -3893,6 +3960,7 @@ body, .App {
 
   .footer-contact-icon {
     color: #f05a2a !important;
+    opacity: 1 !important;
   }
 
   .footer-col-list {
@@ -3918,6 +3986,7 @@ body, .App {
     padding: 8px 8px 2px;
     margin-top: 8px;
     color: #6b6b6b !important;
+    opacity: 1 !important;
   }
 }
 
@@ -4457,12 +4526,15 @@ body, .App {
     gap: 12px;
     background: #ffffff !important;
     border: 2px solid rgba(45, 45, 45, 0.3) !important;
+    box-shadow: 0 8px 24px rgba(45, 45, 45, 0.12) !important;
+    opacity: 1 !important;
   }
 
   .contact-field label {
     font-size: 10px;
     color: #2d2d2d !important;
     font-weight: 800 !important;
+    opacity: 1 !important;
   }
 
   .contact-field input,
@@ -4473,12 +4545,16 @@ body, .App {
     background: #ffffff !important;
     color: #2d2d2d !important;
     border: 1.5px solid rgba(45, 45, 45, 0.35) !important;
+    opacity: 1 !important;
+    -webkit-appearance: none !important;
+    -webkit-text-fill-color: #2d2d2d !important;
   }
 
   .contact-field input::placeholder,
   .contact-field textarea::placeholder {
     color: #888888 !important;
     opacity: 1 !important;
+    -webkit-text-fill-color: #888888 !important;
   }
 
   .contact-field textarea {
@@ -4491,11 +4567,14 @@ body, .App {
     min-width: 140px;
     background: #2d2d2d !important;
     color: #ffffff !important;
+    opacity: 1 !important;
+    -webkit-appearance: none !important;
   }
 
   .footer-section {
     padding: 18px 12px 12px;
     background: #2d2d2d !important;
+    opacity: 1 !important;
   }
 
   .footer-brand-row {
@@ -4506,6 +4585,7 @@ body, .App {
   .footer-brand-title {
     font-size: 22px;
     color: #ffffff !important;
+    opacity: 1 !important;
   }
 
   .footer-brand-tagline {
@@ -4517,6 +4597,8 @@ body, .App {
     border: 1px solid rgba(255, 255, 255, 0.18) !important;
     background: rgba(255, 255, 255, 0.06) !important;
     color: #a5a5a5 !important;
+    opacity: 1 !important;
+    -webkit-appearance: none !important;
   }
 
   .footer-social-btn:hover {
@@ -4541,12 +4623,14 @@ body, .App {
     font-size: clamp(34px, 10.5vw, 42px);
     letter-spacing: -1.2px;
     color: #ffffff !important;
+    opacity: 1 !important;
   }
 
   .footer-together {
     top: 30px;
     font-size: clamp(24px, 7.5vw, 30px);
     color: #f05a2a !important;
+    opacity: 1 !important;
   }
 
   .footer-together::before,
@@ -4575,6 +4659,7 @@ body, .App {
     margin-bottom: 7px;
     text-align: center;
     color: #ffffff !important;
+    opacity: 1 !important;
   }
 
   .footer-col-link,
@@ -4582,6 +4667,7 @@ body, .App {
     font-size: 12px;
     text-align: center;
     color: #a5a5a5 !important;
+    opacity: 1 !important;
   }
 
   .footer-col-link:hover {
@@ -4594,6 +4680,7 @@ body, .App {
 
   .footer-contact-icon {
     color: #f05a2a !important;
+    opacity: 1 !important;
   }
 
   .footer-col-list {
@@ -4615,6 +4702,7 @@ body, .App {
     padding: 7px 6px 2px;
     margin-top: 6px;
     color: #6b6b6b !important;
+    opacity: 1 !important;
   }
 
   .design-gallery-section {
