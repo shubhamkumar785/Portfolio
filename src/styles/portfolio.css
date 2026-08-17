@@ -1854,6 +1854,31 @@ html {
     grid-template-columns: 1fr;
     padding: 22px;
     border-radius: 18px;
+    background: #ffffff !important;
+    border: 2px solid rgba(45, 45, 45, 0.25) !important;
+  }
+
+  .contact-field label {
+    color: #2d2d2d !important;
+    font-weight: 800 !important;
+  }
+
+  .contact-field input,
+  .contact-field textarea {
+    background: #ffffff !important;
+    color: #2d2d2d !important;
+    border: 1.5px solid rgba(45, 45, 45, 0.3) !important;
+  }
+
+  .contact-field input::placeholder,
+  .contact-field textarea::placeholder {
+    color: #888888 !important;
+    opacity: 1 !important;
+  }
+
+  .contact-submit {
+    background: #2d2d2d !important;
+    color: #ffffff !important;
   }
 
   .footer-title {
@@ -1861,6 +1886,7 @@ html {
     line-height: 0.92;
     letter-spacing: 1px !important;
     white-space: normal;
+    color: #ffffff !important;
   }
 
   .footer-brand-tagline {
@@ -1870,6 +1896,7 @@ html {
   .footer-together {
     top: 58px;
     font-size: clamp(38px, 10vw, 56px);
+    color: #f05a2a !important;
   }
 
   .footer-columns {
@@ -1884,13 +1911,31 @@ html {
     text-align: center;
   }
 
+  .footer-col-heading {
+    color: #ffffff !important;
+  }
+
+  .footer-col-link {
+    color: #a5a5a5 !important;
+  }
+
+  .footer-col-link:hover {
+    color: #ffffff !important;
+  }
+
   .footer-contact-item {
     justify-content: center;
+    color: #a5a5a5 !important;
+  }
+
+  .footer-contact-icon {
+    color: #f05a2a !important;
   }
 
   .footer-copyright {
     font-size: 12px;
     line-height: 1.5;
+    color: #6b6b6b !important;
   }
 }
 
@@ -2001,16 +2046,34 @@ html {
 
   .contact-form {
     padding: 18px;
+    background: #ffffff !important;
+    border: 2px solid rgba(45, 45, 45, 0.25) !important;
+  }
+
+  .contact-field label {
+    color: #2d2d2d !important;
+    font-weight: 800 !important;
   }
 
   .contact-field input,
   .contact-field textarea {
     font-size: 14px;
     border-radius: 10px;
+    background: #ffffff !important;
+    color: #2d2d2d !important;
+    border: 1.5px solid rgba(45, 45, 45, 0.3) !important;
+  }
+
+  .contact-field input::placeholder,
+  .contact-field textarea::placeholder {
+    color: #888888 !important;
+    opacity: 1 !important;
   }
 
   .contact-submit {
     width: 100%;
+    background: #2d2d2d !important;
+    color: #ffffff !important;
   }
 
   .project-image,
@@ -3627,27 +3690,34 @@ body, .App {
   .contact-kicker {
     font-size: 11px;
     letter-spacing: 2px;
+    color: #ff5722 !important;
   }
 
   .contact-heading {
     font-size: clamp(36px, 12vw, 48px);
     letter-spacing: 2px;
+    color: #2d2d2d !important;
   }
 
   .contact-description {
     font-size: 13px;
     line-height: 1.6;
+    color: #4f4f4f !important;
   }
 
   .contact-form {
     padding: 18px 16px;
     border-radius: 16px;
     gap: 14px;
+    background: #ffffff !important;
+    border: 2px solid rgba(45, 45, 45, 0.3) !important;
   }
 
   .contact-field label {
     font-size: 11px;
     letter-spacing: 1px;
+    color: #2d2d2d !important;
+    font-weight: 800 !important;
   }
 
   .contact-field input,
@@ -3655,6 +3725,28 @@ body, .App {
     padding: 12px 13px;
     font-size: 13px;
     border-radius: 10px;
+    background: #ffffff !important;
+    color: #2d2d2d !important;
+    border: 1.5px solid rgba(45, 45, 45, 0.35) !important;
+  }
+
+  .contact-field input::placeholder,
+  .contact-field textarea::placeholder {
+    color: #888888 !important;
+    opacity: 1 !important;
+  }
+
+  .contact-field textarea {
+    min-height: 120px;
+  }
+
+  .contact-submit {
+    padding: 13px 24px;
+    font-size: 14px;
+    border-radius: 999px;
+    background: #2d2d2d !important;
+    color: #ffffff !important;
+  }
   }
 
   .contact-field textarea {
@@ -3696,6 +3788,7 @@ body, .App {
 @media (max-width: 430px) {
   .footer-section {
     padding: 20px 16px 14px;
+    background: #2d2d2d !important;
   }
 
   .footer-brand-row {
@@ -3709,11 +3802,24 @@ body, .App {
 
   .footer-brand-title {
     font-size: 24px;
+    color: #ffffff !important;
   }
 
   .footer-brand-tagline {
     font-size: 12px;
     display: none;
+  }
+
+  .footer-social-btn {
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: #a5a5a5 !important;
+  }
+
+  .footer-social-btn:hover {
+    border-color: rgba(255, 255, 255, 0.45) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
   }
 
   .footer-main {
@@ -3732,11 +3838,13 @@ body, .App {
   .footer-title {
     font-size: clamp(38px, 12vw, 48px);
     letter-spacing: -1.5px;
+    color: #ffffff !important;
   }
 
   .footer-together {
     top: 32px;
     font-size: clamp(28px, 8.5vw, 34px);
+    color: #f05a2a !important;
   }
 
   .footer-columns {
@@ -3759,16 +3867,26 @@ body, .App {
     letter-spacing: 1.5px;
     margin-bottom: 8px;
     text-align: center;
+    color: #ffffff !important;
   }
 
   .footer-col-link,
   .footer-contact-item {
     font-size: 13px;
     text-align: center;
+    color: #a5a5a5 !important;
+  }
+
+  .footer-col-link:hover {
+    color: #ffffff !important;
   }
 
   .footer-contact-item {
     justify-content: center;
+  }
+
+  .footer-contact-icon {
+    color: #f05a2a !important;
   }
 
   .footer-col-list {
@@ -3793,6 +3911,7 @@ body, .App {
     font-size: 11px;
     padding: 8px 8px 2px;
     margin-top: 8px;
+    color: #6b6b6b !important;
   }
 }
 
@@ -4231,6 +4350,18 @@ body, .App {
     margin-bottom: 24px;
   }
 
+  .contact-kicker {
+    color: #ff5722 !important;
+  }
+
+  .contact-heading {
+    color: #2d2d2d !important;
+  }
+
+  .contact-description {
+    color: #4f4f4f !important;
+  }
+
   .projects-grid,
   .services-grid {
     gap: 12px;
@@ -4314,10 +4445,14 @@ body, .App {
     padding: 16px 14px;
     border-radius: 14px;
     gap: 12px;
+    background: #ffffff !important;
+    border: 2px solid rgba(45, 45, 45, 0.3) !important;
   }
 
   .contact-field label {
     font-size: 10px;
+    color: #2d2d2d !important;
+    font-weight: 800 !important;
   }
 
   .contact-field input,
@@ -4325,6 +4460,15 @@ body, .App {
     padding: 11px 12px;
     font-size: 12px;
     border-radius: 8px;
+    background: #ffffff !important;
+    color: #2d2d2d !important;
+    border: 1.5px solid rgba(45, 45, 45, 0.35) !important;
+  }
+
+  .contact-field input::placeholder,
+  .contact-field textarea::placeholder {
+    color: #888888 !important;
+    opacity: 1 !important;
   }
 
   .contact-field textarea {
@@ -4335,10 +4479,13 @@ body, .App {
     padding: 12px 20px;
     font-size: 13px;
     min-width: 140px;
+    background: #2d2d2d !important;
+    color: #ffffff !important;
   }
 
   .footer-section {
     padding: 18px 12px 12px;
+    background: #2d2d2d !important;
   }
 
   .footer-brand-row {
@@ -4348,11 +4495,24 @@ body, .App {
 
   .footer-brand-title {
     font-size: 22px;
+    color: #ffffff !important;
   }
 
   .footer-brand-tagline {
     font-size: 11px;
     display: none;
+  }
+
+  .footer-social-btn {
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: #a5a5a5 !important;
+  }
+
+  .footer-social-btn:hover {
+    border-color: rgba(255, 255, 255, 0.45) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
   }
 
   .footer-main {
@@ -4370,11 +4530,13 @@ body, .App {
   .footer-title {
     font-size: clamp(34px, 10.5vw, 42px);
     letter-spacing: -1.2px;
+    color: #ffffff !important;
   }
 
   .footer-together {
     top: 30px;
     font-size: clamp(24px, 7.5vw, 30px);
+    color: #f05a2a !important;
   }
 
   .footer-together::before,
@@ -4402,16 +4564,26 @@ body, .App {
     letter-spacing: 1.2px;
     margin-bottom: 7px;
     text-align: center;
+    color: #ffffff !important;
   }
 
   .footer-col-link,
   .footer-contact-item {
     font-size: 12px;
     text-align: center;
+    color: #a5a5a5 !important;
+  }
+
+  .footer-col-link:hover {
+    color: #ffffff !important;
   }
 
   .footer-contact-item {
     justify-content: center;
+  }
+
+  .footer-contact-icon {
+    color: #f05a2a !important;
   }
 
   .footer-col-list {
@@ -4432,6 +4604,7 @@ body, .App {
     font-size: 10px;
     padding: 7px 6px 2px;
     margin-top: 6px;
+    color: #6b6b6b !important;
   }
 
   .design-gallery-section {
