@@ -31,7 +31,7 @@ const ProjectsSection = () => {
       category: "MERN",
       description: "A modern printing shop management system with customer order tracking, real-time order status updates, invoice generation, and admin dashboard for managing products, pricing, and customer requests efficiently.",
       technologies: ["Express.js", "React", "Node.js", "REST API", "JWT", "Stripe", "Git", "GitHub", "Vercel"],
-      link: "https://poonam-printing.vercel.app/",
+      link: "https://poonamprinting.in/",
       image: poonamPrintingShopImg
     },
     {

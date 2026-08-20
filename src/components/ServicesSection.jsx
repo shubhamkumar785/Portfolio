@@ -12,10 +12,10 @@ const ServicesSection = () => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 1024)
     }
-    
+
     checkMobile()
     window.addEventListener('resize', checkMobile)
-    
+
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
@@ -204,10 +204,10 @@ const ServicesSection = () => {
 
       {hasMoreServices && (
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
-          <button 
+          <button
             onClick={() => setShowAll(!showAll)}
             className="project-button"
-            style={{ 
+            style={{
               padding: '12px 28px',
               fontSize: '14px',
               cursor: 'pointer',
@@ -235,14 +235,14 @@ const ServicesSection = () => {
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </button>
-            
+
             <div className="services-modal-body">
               <div className="services-modal-left">
                 <span className="services-modal-kicker">SERVICE OVERVIEW</span>
                 <h3 className="services-modal-title">{activeService.title}</h3>
                 <div className="services-modal-divider"></div>
                 <p className="services-modal-text-lead">{activeService.detailedDescription}</p>
-                
+
                 <h4 className="services-modal-section-title">Key Capabilities</h4>
                 <ul className="services-modal-capabilities">
                   {activeService.capabilities.map((cap, idx) => (
@@ -253,7 +253,7 @@ const ServicesSection = () => {
                   ))}
                 </ul>
               </div>
-              
+
               <div className="services-modal-right">
                 <h4 className="services-modal-section-title">Technology Ecosystem</h4>
                 <div className="services-modal-tech-list">

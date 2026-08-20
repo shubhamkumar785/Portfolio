@@ -4,16 +4,39 @@
 
 /* Keyframes */
 @keyframes slideInFromLeft {
-  from { opacity: 0; transform: translateX(-60px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
+
 @keyframes slideInFromRight {
-  from { opacity: 0; transform: translateX(60px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
+
 @keyframes slideInFromBottom {
-  from { opacity: 0; transform: translateY(50px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Base hidden state */
@@ -28,23 +51,43 @@
 .anim-from-left.in-view {
   animation: slideInFromLeft 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+
 .anim-from-right.in-view {
   animation: slideInFromRight 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+
 .anim-from-bottom.in-view {
   animation: slideInFromBottom 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* Staggered delays for grids */
-.anim-delay-1 { animation-delay: 0.05s !important; }
-.anim-delay-2 { animation-delay: 0.15s !important; }
-.anim-delay-3 { animation-delay: 0.25s !important; }
-.anim-delay-4 { animation-delay: 0.35s !important; }
-.anim-delay-5 { animation-delay: 0.45s !important; }
-.anim-delay-6 { animation-delay: 0.55s !important; }
+.anim-delay-1 {
+  animation-delay: 0.05s !important;
+}
+
+.anim-delay-2 {
+  animation-delay: 0.15s !important;
+}
+
+.anim-delay-3 {
+  animation-delay: 0.25s !important;
+}
+
+.anim-delay-4 {
+  animation-delay: 0.35s !important;
+}
+
+.anim-delay-5 {
+  animation-delay: 0.45s !important;
+}
+
+.anim-delay-6 {
+  animation-delay: 0.55s !important;
+}
 
 /* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
+
   .anim-from-left,
   .anim-from-right,
   .anim-from-bottom {
@@ -233,9 +276,20 @@
 }
 
 @keyframes pulseGreen {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(39, 201, 63, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(39, 201, 63, 0); }
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(39, 201, 63, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(39, 201, 63, 0);
+  }
 }
 
 .what-i-do {
@@ -1089,9 +1143,17 @@
   display: inline-block;
 }
 
-.dot-red { background: #ff5f56; }
-.dot-yellow { background: #ffbd2e; }
-.dot-green { background: #27c93f; }
+.dot-red {
+  background: #ff5f56;
+}
+
+.dot-yellow {
+  background: #ffbd2e;
+}
+
+.dot-green {
+  background: #27c93f;
+}
 
 .browser-url-bar {
   flex: 1;
@@ -1955,26 +2017,26 @@ html {
     color: #6b6b6b !important;
     opacity: 1 !important;
   }
-  }
+}
 
-  .footer-col-link:hover {
-    color: #ffffff !important;
-  }
+.footer-col-link:hover {
+  color: #ffffff !important;
+}
 
-  .footer-contact-item {
-    justify-content: center;
-    color: #a5a5a5 !important;
-  }
+.footer-contact-item {
+  justify-content: center;
+  color: #a5a5a5 !important;
+}
 
-  .footer-contact-icon {
-    color: #f05a2a !important;
-  }
+.footer-contact-icon {
+  color: #f05a2a !important;
+}
 
-  .footer-copyright {
-    font-size: 12px;
-    line-height: 1.5;
-    color: #6b6b6b !important;
-  }
+.footer-copyright {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #6b6b6b !important;
+}
 }
 
 @media (max-width: 480px) {
@@ -2767,15 +2829,15 @@ html {
     padding: 10px 20px;
     font-size: 14px;
   }
-  
+
   .contact-page-view {
     padding: 0;
   }
-  
+
   .contact-full-page {
     padding: 0 20px 40px;
   }
-  
+
   .contact-full-page .contact-section {
     padding: 0;
   }
@@ -3021,13 +3083,25 @@ body.modal-open .services-section {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: scale(0.96) translateY(20px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .animate-fade-in {
@@ -3045,19 +3119,19 @@ body.modal-open .services-section {
     padding: 36px 24px;
     gap: 32px;
   }
-  
+
   .services-modal-close {
     top: 16px;
     right: 16px;
     width: 38px;
     height: 38px;
   }
-  
+
   .services-modal-title {
     font-size: 30px;
     padding-right: 32px;
   }
-  
+
   .services-modal-content {
     max-height: calc(100vh - 40px);
     border-radius: 22px;
@@ -3220,7 +3294,7 @@ body.modal-open .services-section {
   .footer-modal-overlay {
     padding: 16px;
   }
-  
+
   .footer-modal-body {
     padding: 34px 24px 28px;
   }
@@ -3238,7 +3312,8 @@ body.modal-open .services-section {
 /* ==========================================================================
    Smooth Scroll Animations (IntersectionObserver target styles)
    ========================================================================== */
-body, .App {
+body,
+.App {
   overflow-x: hidden;
   max-width: 100vw;
 }
@@ -3284,21 +3359,40 @@ body, .App {
 }
 
 /* Staggered Delay Utilities */
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
-.delay-5 { transition-delay: 0.5s; }
-.delay-6 { transition-delay: 0.6s; }
+.delay-1 {
+  transition-delay: 0.1s;
+}
+
+.delay-2 {
+  transition-delay: 0.2s;
+}
+
+.delay-3 {
+  transition-delay: 0.3s;
+}
+
+.delay-4 {
+  transition-delay: 0.4s;
+}
+
+.delay-5 {
+  transition-delay: 0.5s;
+}
+
+.delay-6 {
+  transition-delay: 0.6s;
+}
 
 /* Responsive Adjustments for Small Devices */
 @media (max-width: 768px) {
   .reveal-left {
     transform: translate3d(-24px, 0, 0);
   }
+
   .reveal-right {
     transform: translate3d(24px, 0, 0);
   }
+
   .reveal-up {
     transform: translate3d(0, 30px, 0);
   }
@@ -3306,6 +3400,7 @@ body, .App {
 
 /* Accessibility: Respect Reduced Motion Preferences */
 @media (prefers-reduced-motion: reduce) {
+
   .reveal-left,
   .reveal-right,
   .reveal-up,
@@ -3326,6 +3421,7 @@ body, .App {
     opacity: 0;
     transform: translate3d(0, 45px, 0) scale(0.96);
   }
+
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(1);
@@ -3337,6 +3433,7 @@ body, .App {
     opacity: 0;
     transform: translate3d(-50px, 0, 0);
   }
+
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -3348,6 +3445,7 @@ body, .App {
     opacity: 0;
     transform: translate3d(50px, 0, 0);
   }
+
   100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -3362,10 +3460,12 @@ body, .App {
     opacity: 0.6;
     transform: translate3d(0, 30px, 0) scale(0.96);
   }
+
   50% {
     filter: invert(0.4) contrast(1.1) hue-rotate(90deg);
     opacity: 0.85;
   }
+
   100% {
     clip-path: inset(0px 0% 0px 0% round 0px);
     filter: invert(0) contrast(1) hue-rotate(0deg);
@@ -3376,6 +3476,7 @@ body, .App {
 
 /* 3. CSS Scroll-Driven Animations API (View Timeline) */
 @supports (animation-timeline: view()) {
+
   .scroll-fade-in,
   .reveal-up {
     animation: cssScrollFadeIn linear both;
@@ -3408,9 +3509,9 @@ body, .App {
 /* 4. Fallback for Inverted Reveal Scroller using IntersectionObserver */
 .inverted-reveal-scroller {
   transition: clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    filter 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   clip-path: inset(30px 2.5% 30px 2.5% round 24px);
   filter: invert(0.7) contrast(1.1);
   opacity: 0.7;
@@ -3812,41 +3913,41 @@ body, .App {
     opacity: 1 !important;
     -webkit-appearance: none !important;
   }
-  }
+}
 
-  .contact-field textarea {
-    min-height: 120px;
-  }
+.contact-field textarea {
+  min-height: 120px;
+}
 
-  .contact-submit {
-    padding: 13px 24px;
-    font-size: 14px;
-    min-width: 160px;
-  }
+.contact-submit {
+  padding: 13px 24px;
+  font-size: 14px;
+  min-width: 160px;
+}
 
-  .contact-success {
-    padding: 48px 20px;
-    border-radius: 16px;
-  }
+.contact-success {
+  padding: 48px 20px;
+  border-radius: 16px;
+}
 
-  .contact-success-icon {
-    width: 64px;
-    height: 64px;
-    font-size: 30px;
-  }
+.contact-success-icon {
+  width: 64px;
+  height: 64px;
+  font-size: 30px;
+}
 
-  .contact-success-title {
-    font-size: 24px;
-  }
+.contact-success-title {
+  font-size: 24px;
+}
 
-  .contact-success-desc {
-    font-size: 13px;
-  }
+.contact-success-desc {
+  font-size: 13px;
+}
 
-  .contact-success-btn {
-    padding: 12px 24px;
-    font-size: 13px;
-  }
+.contact-success-btn {
+  padding: 12px 24px;
+  font-size: 13px;
+}
 }
 
 /* Footer Mobile - 430px */
@@ -4843,6 +4944,7 @@ body, .App {
 
 /* Touch-Friendly Interactive Elements */
 @media (hover: none) and (pointer: coarse) {
+
   .nav-link,
   .resume-button,
   .project-button,
@@ -4947,6 +5049,7 @@ img {
 
 /* Loading Performance Optimization */
 @media (max-width: 768px) {
+
   .reveal-left,
   .reveal-right,
   .reveal-up,
@@ -4987,6 +5090,7 @@ img {
 
 /* Print Styles (Bonus) */
 @media print {
+
   .header,
   .mobile-menu-toggle,
   .scroll-indicator,
