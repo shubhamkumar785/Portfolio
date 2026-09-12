@@ -245,6 +245,11 @@
   text-transform: uppercase;
 }
 
+.highlight-paytm {
+  color: #ff5722;
+  font-weight: 900;
+}
+
 .intro-short-desc {
   font-size: 13px;
   line-height: 1.45;
@@ -1538,20 +1543,7 @@ html {
   }
 
   .mobile-menu-toggle {
-    width: 44px;
-    height: 44px;
-    border: 1.5px solid #2d2d2d;
-    border-radius: 999px;
-    background: #ffffff;
-    color: #2d2d2d;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    cursor: pointer;
-    z-index: 130;
-    box-shadow: 0 8px 20px rgba(45, 45, 45, 0.08);
+    display: none !important;
   }
 
   .mobile-menu-toggle span {
@@ -3948,7 +3940,6 @@ body,
   padding: 12px 24px;
   font-size: 13px;
 }
-}
 
 /* Footer Mobile - 430px */
 @media (max-width: 430px) {
@@ -5111,5 +5102,146 @@ img {
   .project-card,
   .service-card {
     page-break-inside: avoid;
+  }
+}
+
+/* ===================== CONTACT SECTION ===================== */
+.contact-section {
+  background: #f7f3ec;
+  padding: 72px 24px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-inner {
+  width: 100%;
+  max-width: 480px;
+}
+
+.contact-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #ff5722;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: clamp(42px, 10vw, 64px);
+  font-weight: 900;
+  color: #1a1a1a;
+  font-family: 'Arial Black', sans-serif;
+  line-height: 1;
+  margin: 0 0 14px 0;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+.contact-subtext {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 36px 0;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cf-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cf-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.cf-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid #c8c0b0;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #1a1a1a;
+  outline: none;
+  transition: border-color 0.2s ease;
+  font-family: inherit;
+  width: 100%;
+}
+
+.cf-input::placeholder {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.cf-input:focus {
+  border-bottom-color: #1a1a1a;
+}
+
+.cf-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23555' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  padding-right: 24px;
+}
+
+.cf-textarea {
+  resize: vertical;
+  min-height: 90px;
+  line-height: 1.5;
+}
+
+.cf-submit {
+  margin-top: 12px;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 16px 0;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  letter-spacing: 0.3px;
+  transition: background 0.2s ease, transform 0.15s ease;
+  font-family: inherit;
+}
+
+.cf-submit:hover {
+  background: #ff5722;
+  transform: translateY(-1px);
+}
+
+.cf-submit:active {
+  transform: translateY(0);
+}
+
+.contact-full-page {
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 48px 20px 60px;
+  }
+
+  .contact-heading {
+    font-size: 44px;
   }
 }

@@ -8,7 +8,7 @@ const ProfileSection = () => {
           <span>HI THERE!</span>
         </div>
         <h1 className="intro-name">Shubham</h1>
-        <p className="intro-role">Backend & Gen AI Engineer</p>
+        <p className="intro-role">Backend & Gen AI Engineer at Paytm</p>
         <p className="intro-short-desc">
           Crafting scalable microservices, resilient APIs, and intelligent AI-powered solutions.
         </p>
