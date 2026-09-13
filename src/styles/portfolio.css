@@ -1538,7 +1538,7 @@ html {
     width: 100%;
     padding: 18px 28px;
     background: rgba(251, 248, 241, 0.94);
-    border-bottom: 1px solid rgba(45, 45, 45, 0.08);
+    border-bottom: none;
     backdrop-filter: blur(14px);
   }
 
