@@ -84,8 +84,8 @@ const ProjectsSection = () => {
     }
   ]
 
-  // Show 3 projects on mobile, 6 on desktop
-  const initialProjectCount = isMobile ? 3 : 6
+  // Show 2 projects on mobile, 6 on desktop
+  const initialProjectCount = isMobile ? 2 : 6
   const projectsToShow = showAll ? projects : projects.slice(0, initialProjectCount)
   const hasMoreProjects = projects.length > initialProjectCount
 
