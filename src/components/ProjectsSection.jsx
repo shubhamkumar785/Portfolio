@@ -68,7 +68,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Fee Management System",
-      category: "Web Application",
+      category: "Desktop Application",
       description: "A system to manage student fee records, payments, and reports efficiently.",
       technologies: ["Java", "Swing GUI Framework", "GitHub", "JDBC", "MySQL"],
       link: "https://github.com/shubhamkumar785/FeeManagementSystem",
