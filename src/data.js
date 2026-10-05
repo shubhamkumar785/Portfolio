@@ -1,0 +1,193 @@
+import campussetuImg from './assets/images/campussetu.png'
+import ecommerceImg from './assets/images/emmorce.png'
+import feemanagementImg from './assets/images/feemanagement.png'
+import portfolioImg from './assets/images/portfolio.png'
+import nestLivingImg from './assets/images/nestLiving.png'
+import ezoneImg from './assets/images/ezoneImg.png'
+import poonamPrintingShopImg from './assets/images/PoonamPrintingShop.png'
+
+export const contact = {
+  email: 'shubhammpathak566@gmail.com',
+  phone: '+91 7858024086',
+  phoneRaw: '917858024086',
+  github: 'https://github.com/shubhamkumar785',
+  linkedin: 'https://www.linkedin.com/in/shubham-kumar-5a85032a6/',
+  location: 'Jamshedpur, India',
+}
+
+export const projects = [
+  {
+    title: 'Poonam Printing Shop',
+    category: 'MERN',
+    description: 'Order management for a real print shop: customers track orders and status live, the owner gets invoices and an admin panel for products and pricing.',
+    technologies: ['Express.js', 'React', 'Node.js', 'REST API', 'JWT', 'Stripe', 'Vercel'],
+    link: 'https://poonamprinting.in/',
+    image: poonamPrintingShopImg,
+  },
+  {
+    title: 'NestLiving',
+    category: 'Full Stack',
+    description: 'Home & lifestyle store covering furniture, décor, lighting and ceramics. Has auth, a product catalog, cart, wishlist and checkout.',
+    technologies: ['Java', 'Spring Boot', 'React', 'MySQL', 'Hibernate', 'Spring Security', 'JWT', 'AWS'],
+    link: 'https://nestliving.vercel.app/',
+    image: nestLivingImg,
+  },
+  {
+    title: 'CampusSetu',
+    category: 'Microservices',
+    description: 'A campus platform for students and faculty, split into services behind an API gateway, with WebSocket for the real-time bits.',
+    technologies: ['Java', 'Spring Boot', 'Microservices', 'API Gateway', 'WebSocket', 'Docker', 'AWS', 'React'],
+    link: 'https://campussetu.in/',
+    image: campussetuImg,
+  },
+  {
+    title: 'E-Zone',
+    category: 'Full Stack',
+    description: 'A university ERP with role-based dashboards, JWT auth and live messaging. Deployed through a CI/CD pipeline on Docker + AWS.',
+    technologies: ['Spring Boot', 'React', 'Microservices', 'JWT', 'WebSocket', 'MySQL', 'Docker', 'CI/CD'],
+    link: 'https://ezone-university.vercel.app',
+    image: ezoneImg,
+  },
+  {
+    title: 'ECommerce',
+    category: 'Backend',
+    description: 'Spring Boot e-commerce backend: authentication, cart and payments, with MongoDB for storage.',
+    technologies: ['Java', 'Spring Boot', 'Spring Security', 'MongoDB', 'JWT', 'Docker'],
+    link: 'https://github.com/shubhamkumar785/ecommerce',
+    image: ecommerceImg,
+  },
+  {
+    title: 'Fee Management System',
+    category: 'Desktop',
+    description: 'Where it started. A Java Swing app for keeping student fee records, payments and reports, with JDBC talking to MySQL.',
+    technologies: ['Java', 'Swing', 'JDBC', 'MySQL'],
+    link: 'https://github.com/shubhamkumar785/FeeManagementSystem',
+    image: feemanagementImg,
+  },
+  {
+    title: 'Portfolio',
+    category: 'Frontend',
+    description: 'This site. React + Vite, hand-written CSS, no UI kit.',
+    technologies: ['React', 'Vite', 'CSS', 'Vercel'],
+    link: 'https://shubhxm-portfolio.vercel.app/',
+    image: portfolioImg,
+  },
+]
+
+export const services = [
+  {
+    title: 'Backend Development',
+    description: 'Secure, fast Java backends: REST APIs, auth, tuned databases, and code that is ready to deploy to the cloud.',
+    items: ['Spring Boot', 'Microservices', 'REST APIs', 'JWT', 'WebSocket', 'Docker', 'AWS'],
+    detailedDescription: 'Most of my day is spent here. I design backend systems that stay maintainable as they grow: services that are loosely coupled, easy to test, and do not surprise you in production.',
+    capabilities: [
+      'Designing and splitting microservices',
+      'API gateways with OAuth2/JWT auth',
+      'Real-time channels over WebSockets',
+      'Docker images deployed on AWS EC2/ECS',
+      'Unit + integration tests that actually catch things',
+    ],
+    technologiesDetail: [
+      { name: 'Spring Boot', description: 'My default for production-ready Java services.' },
+      { name: 'Microservices', description: 'Small services talking over REST, so one failing does not take down the rest.' },
+      { name: 'JWT & Security', description: 'Token auth with proper role checks on every endpoint.' },
+      { name: 'Cloud & Containers', description: 'Docker images shipped to AWS.' },
+    ],
+  },
+  {
+    title: 'Full Stack Development',
+    description: 'End-to-end apps: a React frontend on a Spring Boot backend, with role-based dashboards, notifications and real-time updates.',
+    items: ['React', 'Spring Boot', 'API Gateway', 'WebSocket', 'Docker', 'Git'],
+    detailedDescription: 'When a project needs both ends, I build both. ERPs, dashboards, fee payments and notifications, with state kept lean on the client and the heavy lifting kept on the server.',
+    capabilities: [
+      'Component-driven React frontends',
+      'Wiring React to Spring Boot / microservice APIs',
+      'Role-based UI for students, faculty and admins',
+      'Live updates and notifications via WebSockets',
+      'Git-based workflow with CI/CD',
+    ],
+    technologiesDetail: [
+      { name: 'React', description: 'Responsive UIs with sensible component structure.' },
+      { name: 'Backend Integration', description: 'Frontend talks to many services through one gateway.' },
+      { name: 'Real-Time', description: 'Pushing alerts and messages straight to the screen.' },
+      { name: 'Docker & Cloud', description: 'The same setup in dev and prod.' },
+    ],
+  },
+  {
+    title: 'API Design',
+    description: 'Clean, documented REST APIs that web apps, mobile apps and third parties can integrate with without guessing.',
+    items: ['REST', 'Spring MVC', 'OpenAPI', 'Rate Limiting', 'Validation', 'Postman'],
+    detailedDescription: 'An API is a contract, so it should be predictable, fast and hard to abuse. I write REST interfaces that a new developer can pick up from the docs alone.',
+    capabilities: [
+      'Consistent RESTful resource design',
+      'Input validation that rejects bad payloads early',
+      'Rate limiting and IP filtering',
+      'Swagger/OpenAPI docs generated from code',
+      'Postman collections for regression testing',
+    ],
+    technologiesDetail: [
+      { name: 'REST & JSON', description: 'Stateless endpoints with small, clean payloads.' },
+      { name: 'Security & Limits', description: 'Rate limits, CORS and request validation.' },
+      { name: 'Swagger/OpenAPI', description: 'Interactive docs for whoever integrates next.' },
+      { name: 'Postman', description: 'Test suites for responses and auth flows.' },
+    ],
+  },
+  {
+    title: 'AI Integration',
+    description: 'Adding LLMs to real products, from RAG over your own documents to assistants and automated workflows.',
+    items: ['Spring AI', 'LangChain4j', 'RAG', 'Vector DB', 'OpenAI API'],
+    detailedDescription: 'This is the part I am most excited about right now. I connect LLMs to business data with retrieval-augmented generation, so answers come from your documents rather than the model\'s imagination.',
+    capabilities: [
+      'Calling LLM APIs from Java services',
+      'RAG pipelines that ground answers in your data',
+      'Semantic search with embeddings + vector DBs',
+      'Agents with LangChain4j and Spring AI',
+      'Chat memory and context handling',
+    ],
+    technologiesDetail: [
+      { name: 'LLM Pipelines', description: 'Secure, structured calls to models like GPT-4.' },
+      { name: 'RAG', description: 'Retrieve relevant docs first, then generate.' },
+      { name: 'LangChain4j & Spring AI', description: 'Java-native frameworks for agents and prompts.' },
+      { name: 'Vector Databases', description: 'Embedding + indexing for semantic search.' },
+    ],
+  },
+  {
+    title: 'Database Design',
+    description: 'Schemas that stay fast as data grows, with the right indexes, caching and transaction boundaries.',
+    items: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'JPA', 'Hibernate'],
+    detailedDescription: 'Bad schemas are expensive to fix later. I model data carefully up front, index for the queries you actually run, and cache what does not need to hit the database.',
+    capabilities: [
+      'ER modelling before writing code',
+      'Redis caching for hot reads',
+      'Indexing and query tuning on slow joins',
+      'ACID transactions where data integrity matters',
+      'Hibernate/JPA mappings without N+1 surprises',
+    ],
+    technologiesDetail: [
+      { name: 'MySQL & PostgreSQL', description: 'For relational data and transactions.' },
+      { name: 'MongoDB', description: 'For flexible document models.' },
+      { name: 'Redis', description: 'An in-memory cache for repeated reads.' },
+      { name: 'JPA & Hibernate', description: 'Object mappings with sane fetch strategies.' },
+    ],
+  },
+  {
+    title: 'Maintenance & Support',
+    description: 'Fixing bugs, speeding up slow code paths, upgrading dependencies and automating deploys after launch.',
+    items: ['CI/CD', 'GitHub Actions', 'JUnit', 'Mockito', 'Profiling', 'Docker'],
+    detailedDescription: 'Shipping is half the job. I keep systems healthy afterwards: tracking down bugs, profiling slow paths and setting up pipelines so releases stop being scary.',
+    capabilities: [
+      'GitHub Actions pipelines for test + build',
+      'JUnit/Mockito coverage against regressions',
+      'Dependency and security audits',
+      'Profiling memory leaks and slow queries',
+      'Hotfixes without downtime',
+    ],
+    technologiesDetail: [
+      { name: 'CI/CD', description: 'Tests and builds run on every push.' },
+      { name: 'Testing', description: 'Mocks that isolate the code under test.' },
+      { name: 'Optimization', description: 'Fixing indexes, queries and memory use.' },
+      { name: 'Bug Fixing', description: 'Read the trace, reproduce, fix, add a test.' },
+    ],
+  },
+]
+

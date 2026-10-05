@@ -1,73 +1,150 @@
-* {
+/* ---------- tokens ---------- */
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f4f4f2;
+  --surface: #ffffff;
+  --ink: #111111;
+  --ink-2: #3d3d3d;
+  --muted: #7c7c7c;
+  --line: #ebebeb;
+  --accent: #e4532a;
+  --accent-soft: rgba(228, 83, 42, 0.16);
+  --grid: rgba(0, 0, 0, 0.05);
+  --term-bg: #1b1a18;
+  --term-line: #2c2a27;
+  --term-ink: #e9e4da;
+  --term-dim: #8b857b;
+  --shadow: rgba(0, 0, 0, 0.12);
+
+  --sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --radius: 10px;
+
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #121211;
+  --bg-alt: #171715;
+  --surface: #1c1b19;
+  --ink: #eee9df;
+  --ink-2: #c3bcb0;
+  --muted: #8d867b;
+  --line: #2e2c28;
+  --accent: #ff6b3d;
+  --accent-soft: rgba(255, 107, 61, 0.22);
+  --grid: rgba(255, 255, 255, 0.035);
+  --term-bg: #0c0c0b;
+  --term-line: #252421;
+  --shadow: rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+
+/* Fallback before JS sets data-theme */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #121211;
+    --bg-alt: #171715;
+    --surface: #1c1b19;
+    --ink: #eee9df;
+    --ink-2: #c3bcb0;
+    --muted: #8d867b;
+    --line: #2e2c28;
+    --accent: #ff6b3d;
+    --accent-soft: rgba(255, 107, 61, 0.22);
+    --grid: rgba(255, 255, 255, 0.035);
+    --term-bg: #0c0c0b;
+    --term-line: #252421;
+    --shadow: rgba(0, 0, 0, 0.5);
+    color-scheme: dark;
+  }
+}
+
+/* ---------- reset ---------- */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 html {
-  /* Prevent font scaling in landscape while allowing user zoom */
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  /* Enable smooth scrolling */
   scroll-behavior: smooth;
-  /* Prevent horizontal scroll */
-  overflow-x: hidden;
-  max-width: 100vw;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fbf8f1;
-  color: #2d2d2d;
   overflow-x: hidden;
-  max-width: 100vw;
-  /* Improve text rendering on mobile */
-  text-rendering: optimizeLegibility;
-  /* Better tap highlighting */
-  -webkit-tap-highlight-color: rgba(240, 90, 42, 0.2);
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 
-#root {
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
+body.no-scroll {
+  overflow: hidden;
 }
 
-.App {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Better mobile button and link interactions */
-button,
 a {
-  -webkit-tap-highlight-color: rgba(240, 90, 42, 0.2);
-  touch-action: manipulation;
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Improve form input on mobile */
+button,
 input,
-textarea,
-select {
-  font-size: 16px; /* Prevents zoom on iOS */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+select,
+textarea {
+  font: inherit;
+  color: inherit;
 }
 
-/* Accessibility: Focus visible for keyboard navigation */
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
 :focus-visible {
-  outline: 2px solid #ff5722;
-  outline-offset: 2px;
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
-/* Remove focus outline for mouse users */
-:focus:not(:focus-visible) {
-  outline: none;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0s !important;
+  }
 }
