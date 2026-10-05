@@ -109,8 +109,9 @@ const ContactSection = () => {
       label: 'Elsewhere',
       value: (
         <span className="ct-links">
-          <a href={contact.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href={contact.github} target="_blank" rel="me noopener noreferrer">GitHub</a>
+          <a href={contact.linkedin} target="_blank" rel="me noopener noreferrer">LinkedIn</a>
+          <a href={contact.instagram} target="_blank" rel="me noopener noreferrer">Instagram</a>
         </span>
       ),
     },

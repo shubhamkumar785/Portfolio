@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, lazy, useEffect, useState } from 'react'
 import { projects } from '../data'
-import ContactSection from './ContactSection'
+// The contact page is only downloaded when someone actually opens it
+const ContactSection = lazy(() => import('./ContactSection'))
 import { OPEN_CONTACT_FORM } from '../contactForm'
 
 // Coloured strokes around the heading: offset from centre (px), angle, colour.
@@ -23,6 +24,8 @@ const strokes = [
   [300, -60, -15, '#4a8fe7'],
   [260, 90, 40, '#b44fd6'],
 ]
+
+const preloadContact = () => import('./ContactSection')
 
 const CtaSection = () => {
   const [open, setOpen] = useState(false)
@@ -78,14 +81,14 @@ const CtaSection = () => {
           Fill in a short form and I'll get back to you within a day.
         </p>
 
-        <button type="button" className="cta-btn" onClick={openForm}>
+        <button type="button" className="cta-btn" onClick={openForm} onPointerEnter={preloadContact} onFocus={preloadContact}>
           Fill the Form <span className="btn-arrow" aria-hidden="true">→</span>
         </button>
 
         <div className="cta-proof">
           <span className="cta-avatars" aria-hidden="true">
             {projects.slice(0, 6).map((p) => (
-              <img key={p.title} src={p.image} alt="" loading="lazy" />
+              <img key={p.title} src={p.image.thumb} alt="" width="26" height="26" loading="lazy" decoding="async" />
             ))}
           </span>
           <span>{projects.length} projects shipped so far</span>
@@ -99,7 +102,9 @@ const CtaSection = () => {
               <span aria-hidden="true">←</span> Back
             </button>
           </div>
-          <ContactSection />
+          <Suspense fallback={<div className="form-page-loading" aria-busy="true" />}>
+            <ContactSection />
+          </Suspense>
         </div>
       )}
     </section>

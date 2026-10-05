@@ -1,5 +1,6 @@
 import React from 'react'
-import heroImage from '../assets/images/shubham (1).png'
+// 560px WebP: sharp at the enlarged (hover/tap) size on 2x screens, ~1/20th of the original PNG
+import heroImage from '../assets/images/shubham-kumar.png?w=560&format=webp'
 import PaytmLogo from './PaytmLogo'
 
 const HeroSection = () => {
@@ -7,11 +8,12 @@ const HeroSection = () => {
     <section className="hero" id="top">
       <div className="container hero-center">
         <h1 className="hero-title">
+          <span className="sr-only">Shubham Kumar, Software Developer at Paytm. </span>
           <span className="line"><span className="load-up" style={{ '--i': 0 }}>Making sure your payment goes through.</span></span>
         </h1>
 
-        <div className="meet load-in" style={{ '--i': 2 }} tabIndex={0} aria-label="Photo of Shubham">
-          <img src={heroImage} alt="Shubham Kumar" width="1024" height="1536" />
+        <div className="meet load-in" style={{ '--i': 2 }} tabIndex={0} aria-label="Photo of Shubham Kumar">
+          <img src={heroImage} alt="Shubham Kumar" width="560" height="840" fetchPriority="high" decoding="async" />
           <span className="meet-pill"><span className="on-hover">hover</span><span className="on-touch">tap</span> to meet me</span>
         </div>
 

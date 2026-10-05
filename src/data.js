@@ -1,10 +1,4 @@
-import campussetuImg from './assets/images/campussetu.png'
-import ecommerceImg from './assets/images/emmorce.png'
-import feemanagementImg from './assets/images/feemanagement.png'
-import portfolioImg from './assets/images/portfolio.png'
-import nestLivingImg from './assets/images/nestLiving.png'
-import ezoneImg from './assets/images/ezoneImg.png'
-import poonamPrintingShopImg from './assets/images/PoonamPrintingShop.png'
+import { img } from './images'
 
 export const contact = {
   email: 'shubhammpathak566@gmail.com',
@@ -12,6 +6,7 @@ export const contact = {
   phoneRaw: '917858024086',
   github: 'https://github.com/shubhamkumar785',
   linkedin: 'https://www.linkedin.com/in/shubham-kumar-5a85032a6/',
+  instagram: 'https://www.instagram.com/shubhxm._/',
   location: 'Jamshedpur, India',
 }
 
@@ -22,7 +17,7 @@ export const projects = [
     description: 'Order management for a real print shop: customers track orders and status live, the owner gets invoices and an admin panel for products and pricing.',
     technologies: ['Express.js', 'React', 'Node.js', 'REST API', 'JWT', 'Stripe', 'Vercel'],
     link: 'https://poonamprinting.in/',
-    image: poonamPrintingShopImg,
+    image: img('PoonamPrintingShop.png'),
   },
   {
     title: 'NestLiving',
@@ -30,7 +25,7 @@ export const projects = [
     description: 'Home & lifestyle store covering furniture, décor, lighting and ceramics. Has auth, a product catalog, cart, wishlist and checkout.',
     technologies: ['Java', 'Spring Boot', 'React', 'MySQL', 'Hibernate', 'Spring Security', 'JWT', 'AWS'],
     link: 'https://nestliving.vercel.app/',
-    image: nestLivingImg,
+    image: img('nestLiving.png'),
   },
   {
     title: 'CampusSetu',
@@ -38,7 +33,7 @@ export const projects = [
     description: 'A campus platform for students and faculty, split into services behind an API gateway, with WebSocket for the real-time bits.',
     technologies: ['Java', 'Spring Boot', 'Microservices', 'API Gateway', 'WebSocket', 'Docker', 'AWS', 'React'],
     link: 'https://campussetu.in/',
-    image: campussetuImg,
+    image: img('campussetu.png'),
   },
   {
     title: 'E-Zone',
@@ -46,7 +41,7 @@ export const projects = [
     description: 'A university ERP with role-based dashboards, JWT auth and live messaging. Deployed through a CI/CD pipeline on Docker + AWS.',
     technologies: ['Spring Boot', 'React', 'Microservices', 'JWT', 'WebSocket', 'MySQL', 'Docker', 'CI/CD'],
     link: 'https://ezone-university.vercel.app',
-    image: ezoneImg,
+    image: img('ezoneImg.png'),
   },
   {
     title: 'ECommerce',
@@ -54,7 +49,7 @@ export const projects = [
     description: 'Spring Boot e-commerce backend: authentication, cart and payments, with MongoDB for storage.',
     technologies: ['Java', 'Spring Boot', 'Spring Security', 'MongoDB', 'JWT', 'Docker'],
     link: 'https://github.com/shubhamkumar785/ecommerce',
-    image: ecommerceImg,
+    image: img('emmorce.png'),
   },
   {
     title: 'Fee Management System',
@@ -62,7 +57,7 @@ export const projects = [
     description: 'Where it started. A Java Swing app for keeping student fee records, payments and reports, with JDBC talking to MySQL.',
     technologies: ['Java', 'Swing', 'JDBC', 'MySQL'],
     link: 'https://github.com/shubhamkumar785/FeeManagementSystem',
-    image: feemanagementImg,
+    image: img('feemanagement.png'),
   },
   {
     title: 'Portfolio',
@@ -70,7 +65,7 @@ export const projects = [
     description: 'This site. React + Vite, hand-written CSS, no UI kit.',
     technologies: ['React', 'Vite', 'CSS', 'Vercel'],
     link: 'https://shubhxm-portfolio.vercel.app/',
-    image: portfolioImg,
+    image: img('portfolio.png'),
   },
 ]
 

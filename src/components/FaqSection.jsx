@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { openContactForm } from '../contactForm'
 
-const faqs = [
+// Exported so the build can also publish these as FAQ structured data (scripts/prerender.js)
+export const faqs = [
   {
     q: 'Are you available for freelance work?',
     a: 'Yes. I take on a small number of freelance projects at a time so each one gets proper attention. Fill in the contact form with a few details and I\'ll tell you honestly whether I can take it on.',

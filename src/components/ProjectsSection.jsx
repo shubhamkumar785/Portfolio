@@ -5,6 +5,11 @@ import { openContactForm } from '../contactForm'
 const ProjectsSection = () => {
   const [active, setActive] = useState(0)
   const itemRefs = useRef([])
+  // Preview screenshots are only fetched once you get near them (current + next),
+  // so opening the page doesn't download all seven at once.
+  const seen = useRef(new Set([0, 1]))
+  seen.current.add(active)
+  seen.current.add(active + 1)
 
   // Whichever project sits in the middle of the viewport becomes "active",
   // and the sticky preview on the left swaps to its screenshot.
@@ -41,7 +46,9 @@ const ProjectsSection = () => {
             {projects.map((p, i) => (
               <img
                 key={p.title}
-                src={p.image}
+                src={seen.current.has(i) ? p.image.src : undefined}
+                srcSet={seen.current.has(i) ? p.image.srcSet : undefined}
+                sizes="(min-width: 1200px) 540px, 45vw"
                 alt=""
                 className={i === active ? 'is-active' : ''}
                 loading="lazy"
@@ -68,7 +75,17 @@ const ProjectsSection = () => {
               >
                 <span className="work-num">{String(index + 1).padStart(2, '0')}</span>
 
-                <img className="work-item-img" src={project.image} alt={`${project.title} screenshot`} loading="lazy" decoding="async" />
+                <img
+                  className="work-item-img"
+                  src={project.image.src}
+                  srcSet={project.image.srcSet}
+                  sizes="100vw"
+                  width="1100"
+                  height="688"
+                  alt={`${project.title} screenshot`}
+                  loading="lazy"
+                  decoding="async"
+                />
 
                 <h3 className="work-item-title">
                   <a href={project.link} target="_blank" rel="noopener noreferrer">{project.title}</a>

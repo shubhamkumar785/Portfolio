@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Personal documents - never commit
+10th result.pdf
+12th result.pdf
+adhar card.pdf
+pan card.pdf

@@ -1,3 +1,16 @@
+/* ---------- font ----------
+   Manrope (variable, Latin subset) self-hosted from /public/fonts and preloaded in
+   index.html, so text renders in the right font without a trip to Google. */
+@font-face {
+  font-family: 'Manrope Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url('/fonts/manrope-latin-v5.woff2') format('woff2-variations'),
+    url('/fonts/manrope-latin-v5.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ---------- tokens ---------- */
 :root {
   --bg: #ffffff;
@@ -9,17 +22,11 @@
   --line: #ebebeb;
   --accent: #e4532a;
   --accent-soft: rgba(228, 83, 42, 0.16);
-  --grid: rgba(0, 0, 0, 0.05);
-  --term-bg: #1b1a18;
-  --term-line: #2c2a27;
-  --term-ink: #e9e4da;
-  --term-dim: #8b857b;
   --shadow: rgba(0, 0, 0, 0.12);
 
-  --sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --sans: 'Manrope Variable', 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
-  --radius: 10px;
 
   color-scheme: light;
 }
@@ -34,9 +41,6 @@
   --line: #2e2c28;
   --accent: #ff6b3d;
   --accent-soft: rgba(255, 107, 61, 0.22);
-  --grid: rgba(255, 255, 255, 0.035);
-  --term-bg: #0c0c0b;
-  --term-line: #252421;
   --shadow: rgba(0, 0, 0, 0.5);
   color-scheme: dark;
 }
@@ -53,9 +57,6 @@
     --line: #2e2c28;
     --accent: #ff6b3d;
     --accent-soft: rgba(255, 107, 61, 0.22);
-    --grid: rgba(255, 255, 255, 0.035);
-    --term-bg: #0c0c0b;
-    --term-line: #252421;
     --shadow: rgba(0, 0, 0, 0.5);
     color-scheme: dark;
   }
