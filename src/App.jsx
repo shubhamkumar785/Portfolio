@@ -21,9 +21,9 @@ function App() {
         <HeroSection />
         <ExperienceSection />
         <ProjectsSection />
-        <CtaSection />
         {/* <ServicesSection /> */}
         <FaqSection />
+        <CtaSection />
       </main>
       <FooterSection />
     </>

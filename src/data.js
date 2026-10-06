@@ -64,7 +64,7 @@ export const projects = [
     category: 'Frontend',
     description: 'This site. React + Vite, hand-written CSS, no UI kit.',
     technologies: ['React', 'Vite', 'CSS', 'Vercel'],
-    link: 'https://shubhxm-portfolio.vercel.app/',
+    link: 'https://shubhxm.vercel.app/',
     image: img('portfolio.png'),
   },
 ]
